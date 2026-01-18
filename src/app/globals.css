@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-oswald);
+
+  --color-primary: #f26522;
+  /* Assumption: Vsaf Adz typically uses an orange/red accent, but I'll check or use a standard professional accent. The prompt says "Solid Accent Color" for CTA. I'll use a bold orange-red. */
+  --color-dark: #0a0a0a;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply font-sans antialiased bg-white text-gray-900;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display uppercase tracking-tight;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.glass-nav {
+  @apply bg-black/10 backdrop-blur-md border-b border-white/10;
+}
+
+.glass-nav-solid {
+  @apply bg-black border-b border-white/10;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
 }
