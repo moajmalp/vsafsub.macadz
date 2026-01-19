@@ -32,8 +32,8 @@ export default function Hero() {
                         transition={{ duration: 0.8 }}
                         className="text-white font-display text-5xl md:text-8xl lg:text-9xl leading-[0.9] uppercase mb-4"
                     >
-                        GRAB ATTENTION <br />
-                        CREATE <span className="text-white italic">IMPACT!</span>
+                        MAKE YOUR <br />
+                        <span className="text-white italic">MARK HERE</span>
                     </motion.h1>
 
                     <motion.p
@@ -42,7 +42,7 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-white/90 text-sm md:text-xl font-medium tracking-wide mb-12"
                     >
-                        The Fastest Growing Indoor and Outdoor Advertising Agency in the Middle East.
+                        BETTER IDEAS FOR YOUR BETTER GROWTH
                     </motion.p>
 
                     {/* Statistics - Matching the reference style */}
@@ -52,18 +52,6 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="flex flex-wrap gap-12 md:gap-24 mb-16"
                     >
-                        <div className="flex flex-col">
-                            <span className="text-primary text-4xl md:text-6xl font-bold mb-2">10000+</span>
-                            <span className="text-white/70 text-lg md:text-2xl uppercase tracking-widest font-light">Projects</span>
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-primary text-4xl md:text-6xl font-bold mb-2">5000+</span>
-                            <span className="text-white/70 text-lg md:text-2xl uppercase tracking-widest font-light">Clients</span>
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-primary text-4xl md:text-6xl font-bold mb-2">8+</span>
-                            <span className="text-white/70 text-lg md:text-2xl uppercase tracking-widest font-light">Countries</span>
-                        </div>
                     </motion.div>
 
                     <motion.div
