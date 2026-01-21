@@ -6,12 +6,12 @@ import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin } from "luc
 
 export default function Footer() {
     return (
-        <footer className="bg-black text-white pt-24 pb-12">
+        <footer className="bg-secondary text-white pt-32 pb-12 font-sans">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20 text-left">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mb-24 text-left">
                     {/* Brand Col */}
                     <div className="lg:col-span-1">
-                        <Link href="/" className="relative h-12 w-32 block mb-8">
+                        <Link href="/" className="block h-10 w-32 mb-10 relative group transition-transform hover:scale-105">
                             <Image
                                 src="https://vsafsub.macadz.com/wp-content/uploads/2026/01/logo-bg.png"
                                 alt="Vsaf Adz Logo"
@@ -19,13 +19,13 @@ export default function Footer() {
                                 className="object-contain"
                             />
                         </Link>
-                        <p className="text-gray-400 leading-relaxed mb-8">
-                            Innovative advertising solutions that get your brand seen, remembered and delivered.
+                        <p className="text-white/50 leading-relaxed mb-10 text-sm font-medium">
+                            Engineering future-proof advertising solutions that elevate brands through creative excellence and strategic innovation.
                         </p>
                         <div className="flex gap-4">
                             {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
-                                <a key={idx} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
-                                    <Icon size={18} />
+                                <a key={idx} href="#" className="w-12 h-12 rounded-2xl border border-white/5 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300 text-white group">
+                                    <Icon size={18} className="group-hover:scale-110" />
                                 </a>
                             ))}
                         </div>
@@ -33,58 +33,60 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-xl font-display uppercase mb-8 tracking-wider">Quick Links</h4>
-                        <ul className="space-y-4 text-gray-400">
-                            <li><Link href="#about" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="#services" className="hover:text-primary transition-colors">Our Services</Link></li>
-                            <li><Link href="#portfolio" className="hover:text-primary transition-colors">Work Gallery</Link></li>
-                            <li><Link href="#blogs" className="hover:text-primary transition-colors">Latest News</Link></li>
-                            <li><Link href="#contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
+                        <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-primary">Discover</h4>
+                        <ul className="space-y-5 text-sm font-medium text-white/50">
+                            <li><Link href="/about" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">About Our Agency</Link></li>
+                            <li><Link href="/services" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">Expert Services</Link></li>
+                            <li><Link href="/portfolio" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">Strategic Work</Link></li>
+                            <li><Link href="/career" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">Career</Link></li>
+                            <li><Link href="/blogs" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">Insights & News</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">Start Project</Link></li>
                         </ul>
                     </div>
 
-                    {/* Services */}
+                    {/* Capabilities */}
                     <div>
-                        <h4 className="text-xl font-display uppercase mb-8 tracking-wider">Our Services</h4>
-                        <ul className="space-y-4 text-gray-400">
-                            <li><span className="hover:text-primary transition-colors cursor-pointer">Events & Booth</span></li>
-                            <li><span className="hover:text-primary transition-colors cursor-pointer">Premium Podium</span></li>
-                            <li><span className="hover:text-primary transition-colors cursor-pointer">Vehicle Branding</span></li>
-                            <li><span className="hover:text-primary transition-colors cursor-pointer">Indoor Branding</span></li>
-                            <li><span className="hover:text-primary transition-colors cursor-pointer">Signages</span></li>
+                        <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-primary">Capabilities</h4>
+                        <ul className="space-y-5 text-sm font-medium text-white/50 text-left">
+                            <li className="hover:text-white transition-colors cursor-pointer">Events & Booth Design</li>
+                            <li className="hover:text-white transition-colors cursor-pointer">Premium Retail Podiums</li>
+                            <li className="hover:text-white transition-colors cursor-pointer">Dynamic Vehicle Branding</li>
+                            <li className="hover:text-white transition-colors cursor-pointer">3D Indoor Branding</li>
+                            <li className="hover:text-white transition-colors cursor-pointer">Large Scale Signages</li>
                         </ul>
                     </div>
 
                     {/* Contact Col */}
                     <div>
-                        <h4 className="text-xl font-display uppercase mb-8 tracking-wider">Contact Us</h4>
-                        <div className="space-y-6 text-gray-400">
-                            <div className="flex gap-4">
-                                <MapPin className="text-primary shrink-0" size={24} />
-                                <p>8127 Abdullah Ibn Badr, Al-Sharafeyah, Jeddah 23218 3197 Saudi Arabia</p>
+                        <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-primary">Get In Touch</h4>
+                        <div className="space-y-8 text-sm font-medium text-white/50">
+                            <div className="flex gap-5">
+                                <MapPin className="text-primary shrink-0" size={20} />
+                                <p className="leading-relaxed">8127 Abdullah Ibn Badr, Al-Sharafeyah, Jeddah 23218 Saudi Arabia</p>
                             </div>
-                            <div className="flex gap-4">
-                                <Phone className="text-primary shrink-0" size={20} />
+                            <div className="flex items-center gap-5">
+                                <Phone className="text-primary shrink-0" size={18} />
                                 <p>+966 549 900 322</p>
                             </div>
-                            <div className="flex gap-4">
-                                <Mail className="text-primary shrink-0" size={20} />
+                            <div className="flex items-center gap-5">
+                                <Mail className="text-primary shrink-0" size={18} />
                                 <p>info@safprinters.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-gray-500 text-sm">
-                        © Copyright 2026 – mac adz. All Right Reserved
+                <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <p className="text-white/20 text-xs font-bold uppercase tracking-widest">
+                        © 2026 Vsaf Adz Agency. Engineered by Mac Adz
                     </p>
-                    <div className="flex gap-8 text-sm text-gray-500">
-                        <a href="#" className="hover:text-primary transition-colors">Terms & Conditions</a>
+                    <div className="flex gap-10 text-xs font-bold uppercase tracking-widest text-white/20">
                         <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" className="hover:text-primary transition-colors">Terms of Use</a>
                     </div>
                 </div>
             </div>
         </footer>
     );
 }
+
