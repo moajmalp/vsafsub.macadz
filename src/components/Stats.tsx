@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Sun } from "lucide-react";
 
 const STATS_DATA = [
-    { label: "BEST QUALITY", value: "100%" },
-    { label: "SATISFACTION", value: "100%" },
+    { label: "BEST QUALITY", value: "98%" },
+    { label: "SATISFACTION", value: "99%" },
     { label: "SUPPORT", value: "100%" },
-    { label: "SUCCESS RATE", value: "100%" },
+    { label: "SUCCESS RATE", value: "99%" },
 ];
 
 export default function Stats() {
@@ -24,7 +24,7 @@ export default function Stats() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="bg-surface p-12 rounded-[2.5rem] flex flex-col items-center justify-center text-center group hover:premium-shadow transition-all duration-500 border border-transparent hover:border-primary/20"
                         >
-                            <h3 className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tight text-secondary group-hover:text-primary transition-colors">
+                            <h3 className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tight text-white group-hover:text-primary transition-colors">
                                 {stat.value}
                             </h3>
                             <p className="text-[11px] font-bold tracking-[0.3em] text-white/80 uppercase group-hover:text-white transition-colors">

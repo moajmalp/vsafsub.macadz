@@ -151,7 +151,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                             <h2 className="text-4xl md:text-5xl font-display uppercase text-secondary font-bold leading-tight">
                                 <span className="text-primary italic">Overview</span>
                             </h2>
-                            <p className="text-secondary/80 text-lg leading-relaxed">
+                            <p className="text-white text-lg leading-relaxed">
                                 {service.content}
                             </p>
 

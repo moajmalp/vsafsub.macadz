@@ -115,7 +115,7 @@ export default function CareerPage() {
                         <div className="relative">
                             <div className="aspect-[4/5] bg-surface rounded-[3rem] overflow-hidden premium-shadow relative group">
                                 <img
-                                    src="https://vsafsub.macadz.com/wp-content/uploads/2026/01/yassen.png"
+                                    src="/careers.jpg"
                                     alt="Work Culture"
                                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                 />
@@ -135,7 +135,7 @@ export default function CareerPage() {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col items-center mb-16 text-center">
                         <span className="text-primary font-bold uppercase tracking-[0.3em] text-[12px] mb-4">Current Opportunities</span>
-                        <h2 className="text-4xl md:text-6xl font-display uppercase tracking-tight text-secondary font-bold">Open Positions</h2>
+                        <h2 className="text-4xl md:text-6xl font-display uppercase tracking-tight text-white font-bold">Open Positions</h2>
                     </div>
 
                     <div className="max-w-5xl mx-auto space-y-6">
@@ -168,7 +168,7 @@ export default function CareerPage() {
                                     </div>
                                 </div>
 
-                                <button className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-2xl font-bold uppercase tracking-[0.15em] text-[11px] transition-all flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
+                                <button className="bg-primary hover:bg-white hover:border-primary hover:text-black border border-transparent text-white px-8 py-4 rounded-2xl font-bold uppercase tracking-[0.15em] text-[11px] transition-all flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
                                     Apply Now <ArrowRight size={16} />
                                 </button>
                             </motion.div>

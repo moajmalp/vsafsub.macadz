@@ -82,7 +82,7 @@ export default function BlogsPage() {
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-6 mb-4 text-[10px] font-bold uppercase tracking-widest text-secondary/40">
+                                    <div className="flex items-center gap-6 mb-4 text-[10px] font-bold uppercase tracking-widest text-white/60">
                                         <div className="flex items-center gap-2">
                                             <User size={14} className="text-primary" />
                                             <span>By {post.author}</span>
@@ -93,11 +93,11 @@ export default function BlogsPage() {
                                         </div>
                                     </div>
 
-                                    <h2 className="text-2xl lg:text-4xl font-display uppercase leading-[1.2] text-secondary group-hover:text-primary transition-all duration-300 font-bold mb-6">
+                                    <h2 className="text-2xl lg:text-4xl font-display uppercase leading-[1.2] text-white group-hover:text-primary transition-all duration-300 font-bold mb-6">
                                         {post.title}
                                     </h2>
 
-                                    <p className="text-secondary/60 leading-relaxed mb-8 line-clamp-2">
+                                    <p className="text-white/80 leading-relaxed mb-8 line-clamp-2">
                                         {post.excerpt}
                                     </p>
 

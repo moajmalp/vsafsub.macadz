@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogBySlug, getAllBlogs } from "@/lib/blog-data";
-import { Calendar, User, Tag, Clock, ArrowLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Calendar, User, Tag, Clock, ArrowLeft, ArrowRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import { use } from "react";
 
@@ -28,6 +28,11 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
     const relatedPosts = getAllBlogs()
         .filter(p => p.id !== post.id && p.category === post.category)
         .slice(0, 2);
+
+    // Get recent posts (excluding current post)
+    const recentPosts = getAllBlogs()
+        .filter(p => p.id !== post.id)
+        .slice(0, 3);
 
     return (
         <main className="min-h-screen bg-surface">
@@ -122,15 +127,19 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
-                                className="bg-white rounded-[2.5rem] p-8 md:p-12 premium-shadow border border-primary/5"
+                                className="bg-white rounded-[2.5rem] p-8 md:p-12 premium-shadow border border-primary/5 text-[#333333]"
                             >
                                 <div
                                     className="prose prose-lg max-w-none
-                                        prose-headings:text-secondary prose-headings:font-display prose-headings:uppercase prose-headings:font-bold
-                                        prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6
-                                        prose-p:text-secondary/80 prose-p:leading-relaxed prose-p:mb-6
-                                        prose-strong:text-secondary prose-strong:font-bold
-                                        prose-a:text-primary prose-a:no-underline hover:prose-a:underline"
+                                        prose-headings:!text-[#1a1a1a] prose-headings:font-display prose-headings:uppercase prose-headings:font-bold
+                                        prose-h2:!text-2xl prose-h2:mt-12 prose-h2:mb-6
+                                        prose-p:!text-[#333333] prose-p:leading-relaxed prose-p:mb-6 prose-p:text-base prose-p:font-normal
+                                        prose-strong:!text-[#1a1a1a] prose-strong:font-bold
+                                        prose-a:!text-primary prose-a:no-underline hover:prose-a:underline
+                                        prose-li:!text-[#333333] prose-ul:!text-[#333333] prose-ol:!text-[#333333]
+                                        prose-blockquote:!text-[#333333] prose-code:!text-[#333333]
+                                        [&>*]:!text-[#333333] [&>p]:!text-[#333333] [&>h2]:!text-[#1a1a1a] [&>h3]:!text-[#1a1a1a]"
+                                    style={{ color: '#333333' }}
                                     dangerouslySetInnerHTML={{ __html: post.content }}
                                 />
 
@@ -141,7 +150,7 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
                                         {post.tags.map((tag, idx) => (
                                             <span
                                                 key={idx}
-                                                className="bg-surface text-secondary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
+                                                className="bg-surface text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
                                             >
                                                 {tag}
                                             </span>
@@ -158,7 +167,7 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
                                                 href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="w-10 h-10 rounded-full bg-surface hover:bg-primary hover:text-white flex items-center justify-center transition-all text-secondary"
+                                                className="w-10 h-10 rounded-full bg-surface hover:bg-primary hover:text-white flex items-center justify-center transition-all text-white"
                                             >
                                                 <Facebook size={16} />
                                             </a>
@@ -166,7 +175,7 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
                                                 href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}&text=${encodeURIComponent(post.title)}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="w-10 h-10 rounded-full bg-surface hover:bg-primary hover:text-white flex items-center justify-center transition-all text-secondary"
+                                                className="w-10 h-10 rounded-full bg-surface hover:bg-primary hover:text-white flex items-center justify-center transition-all text-white"
                                             >
                                                 <Twitter size={16} />
                                             </a>
@@ -174,7 +183,7 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
                                                 href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="w-10 h-10 rounded-full bg-surface hover:bg-primary hover:text-white flex items-center justify-center transition-all text-secondary"
+                                                className="w-10 h-10 rounded-full bg-surface hover:bg-primary hover:text-white flex items-center justify-center transition-all text-white"
                                             >
                                                 <Linkedin size={16} />
                                             </a>
@@ -264,6 +273,54 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
                                     className="inline-block bg-primary text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-secondary transition-colors"
                                 >
                                     {post.category}
+                                </Link>
+                            </motion.div>
+
+                            {/* Recent Posts */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.1 }}
+                                className="bg-white rounded-[2.5rem] p-8 premium-shadow border border-primary/5"
+                            >
+                                <h3 className="text-xl font-display uppercase tracking-wider text-secondary mb-6 font-bold">
+                                    Recent Posts
+                                </h3>
+                                <div className="space-y-6">
+                                    {recentPosts.map((recentPost) => (
+                                        <Link
+                                            key={recentPost.id}
+                                            href={`/blogs/${recentPost.slug}`}
+                                            className="block group"
+                                        >
+                                            <div className="flex items-start gap-4">
+                                                <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-xl premium-shadow">
+                                                    <Image
+                                                        src={recentPost.image}
+                                                        alt={recentPost.title}
+                                                        fill
+                                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                                    />
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <h4 className="text-sm font-display uppercase font-bold text-secondary group-hover:text-primary transition-colors line-clamp-2 mb-2">
+                                                        {recentPost.title}
+                                                    </h4>
+                                                    <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/60">
+                                                        {recentPost.date}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                                <Link
+                                    href="/blogs"
+                                    className="mt-6 inline-flex items-center gap-2 text-primary hover:text-secondary text-sm font-bold uppercase tracking-widest transition-colors"
+                                >
+                                    View All Posts
+                                    <ArrowRight size={14} />
                                 </Link>
                             </motion.div>
                         </aside>
