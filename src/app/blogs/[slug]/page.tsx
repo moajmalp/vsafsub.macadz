@@ -110,6 +110,10 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
                                 fill
                                 className="object-cover"
                                 priority
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 80vw"
+                                quality={85}
+                                placeholder="blur"
+                                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                             />
                         </div>
                     </motion.div>
@@ -244,6 +248,8 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
                                                         alt={relatedPost.title}
                                                         fill
                                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                                        sizes="(max-width: 1024px) 100vw, 25vw"
+                                                        quality={85}
                                                     />
                                                 </div>
                                                 <h4 className="text-sm font-display uppercase font-bold text-secondary group-hover:text-primary transition-colors line-clamp-2">
@@ -301,6 +307,8 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
                                                         alt={recentPost.title}
                                                         fill
                                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                                        sizes="80px"
+                                                        quality={85}
                                                     />
                                                 </div>
                                                 <div className="flex-1 min-w-0">

@@ -114,10 +114,13 @@ export default function CareerPage() {
 
                         <div className="relative">
                             <div className="aspect-[4/5] bg-surface rounded-[3rem] overflow-hidden premium-shadow relative group">
-                                <img
+                                <Image
                                     src="/careers.jpg"
                                     alt="Work Culture"
-                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                    fill
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    quality={85}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
                                 <div className="absolute bottom-10 left-10 text-white">

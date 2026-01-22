@@ -28,7 +28,7 @@ export default function BlogPreview() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {POSTS.map((post) => (
+                        {POSTS.map((post, idx) => (
                             <Link key={post.id} href={`/blogs/${post.slug}`} className="group">
                                 <div className="relative w-full aspect-video overflow-hidden rounded-[1.5rem] mb-6 premium-shadow">
                                     <Image
@@ -36,6 +36,11 @@ export default function BlogPreview() {
                                         alt={post.title}
                                         fill
                                         className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        priority={idx === 0}
+                                        quality={85}
+                                        placeholder="blur"
+                                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                                     />
                                     <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-secondary px-4 py-2 text-[9px] font-bold uppercase tracking-[0.2em] rounded-full">
                                         {post.date.split(' ').slice(0, 2).join(' ')}
