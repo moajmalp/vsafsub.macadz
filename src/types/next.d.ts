@@ -12,3 +12,10 @@ declare module "next/link" {
     const Link: ComponentType<LinkProps>;
     export default Link;
 }
+declare module "next/navigation" {
+    export function notFound(): never;
+    export function redirect(url: string): never;
+    export function useRouter(): any;
+    export function usePathname(): string;
+    export function useSearchParams(): any;
+}

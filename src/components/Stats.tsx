@@ -27,7 +27,7 @@ export default function Stats() {
                             <h3 className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tight text-secondary group-hover:text-primary transition-colors">
                                 {stat.value}
                             </h3>
-                            <p className="text-[11px] font-bold tracking-[0.3em] text-secondary/40 uppercase group-hover:text-secondary transition-colors">
+                            <p className="text-[11px] font-bold tracking-[0.3em] text-white/80 uppercase group-hover:text-white transition-colors">
                                 {stat.label}
                             </p>
                         </motion.div>

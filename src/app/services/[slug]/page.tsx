@@ -82,14 +82,11 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                         >
                             <h3 className="text-xl font-display uppercase tracking-wider text-secondary mb-8 font-bold">Internal Links</h3>
                             <div className="space-y-3">
-                                {services.map((s) => (
+                                {services.filter((s) => s.slug !== slug).map((s) => (
                                     <Link
                                         key={s.slug}
                                         href={`/services/${s.slug}`}
-                                        className={`flex items-center justify-between p-5 rounded-2xl transition-all duration-300 ${s.slug === params.slug
-                                            ? "bg-primary text-white shadow-lg shadow-primary/20"
-                                            : "bg-surface hover:bg-primary/5 text-secondary/70 hover:text-primary"
-                                            }`}
+                                        className="flex items-center justify-between p-5 rounded-2xl transition-all duration-300 bg-secondary text-white border border-transparent hover:bg-white hover:text-primary hover:border-primary"
                                     >
                                         <span className="font-bold uppercase text-[11px] tracking-widest">{s.title}</span>
                                         <ChevronRight size={16} />
@@ -152,9 +149,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                         {/* Text Content */}
                         <div className="space-y-8">
                             <h2 className="text-4xl md:text-5xl font-display uppercase text-secondary font-bold leading-tight">
-                                {service.title} <span className="text-primary italic">Detailing</span>
+                                <span className="text-primary italic">Overview</span>
                             </h2>
-                            <p className="text-secondary/60 text-lg leading-relaxed">
+                            <p className="text-secondary/80 text-lg leading-relaxed">
                                 {service.content}
                             </p>
 
@@ -215,7 +212,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                                                 </svg>
                                                 <span className="absolute text-lg font-bold text-secondary">{stat.value}%</span>
                                             </div>
-                                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-secondary/40 max-w-[100px]">
+                                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-secondary/80 max-w-[100px]">
                                                 {stat.label}
                                             </span>
                                         </div>

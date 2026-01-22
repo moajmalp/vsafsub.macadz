@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
 
 export default function Hero() {
     return (
@@ -26,15 +25,6 @@ export default function Hero() {
             {/* Content Container */}
             <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-24">
                 <div className="flex flex-col items-start max-w-4xl">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8 }}
-                        className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white mb-4 shadow-xl shadow-primary/20"
-                    >
-                        <Star size={16} className="animate-pulse" />
-                    </motion.div>
-
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
