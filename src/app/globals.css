@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Clash Display', sans-serif;
-  --font-display: 'Clash Display', sans-serif;
+  --font-oswald: var(--font-oswald);
+  --font-inter: var(--font-inter);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-oswald);
 
-  /* Premium Light Blue Design System */
-  --color-primary: #00A3FF;
-  /* Vibrant Light Blue */
-  --color-primary-dark: #0082CC;
+  /* Dark Blue Design System */
+  --color-primary: #0066CC;
+  /* Darker Blue */
+  --color-primary-dark: #004D99;
   --color-secondary: #0F1728;
   /* Sophisticated Navy */
-  --color-accent: #E0F2FE;
-  /* Soft Sky Blue Tint */
-  --color-surface: #F8FAFC;
-  /* Clean Backdrop */
+  --color-accent: #1E3A5F;
+  /* Dark Blue Accent */
+  --color-surface: #0A0F1A;
+  /* Dark Backdrop */
 
-  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee: marquee 15s linear infinite;
 
   @keyframes marquee {
     from {
@@ -26,12 +28,21 @@
       transform: translateX(-50%);
     }
   }
+
+  @keyframes shimmer {
+    0%, 100% {
+      background-position: -200% 0;
+    }
+    50% {
+      background-position: 200% 0;
+    }
+  }
 }
 
 @layer base {
   body {
-    font-family: var(--font-sans);
-    @apply antialiased bg-surface text-secondary;
+    font-family: var(--font-inter);
+    @apply antialiased bg-black text-white;
   }
 
   h1,
@@ -40,7 +51,7 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-display);
+    font-family: var(--font-oswald);
     @apply uppercase tracking-tight font-bold;
   }
 

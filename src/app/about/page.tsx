@@ -36,11 +36,11 @@ export default function AboutPage() {
             <Navbar />
 
             {/* Hero Section - Matching Career Style */}
-            <section className="relative pt-24 pb-16 bg-white overflow-hidden">
+            <section className="relative pt-24 pb-16 bg-black overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[#F0F9FF]" />
-                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#BAE6FD] blur-[150px] opacity-20 rounded-full" />
-                    <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#60A5FA] blur-[200px] opacity-10 rounded-full" />
+                    <div className="absolute inset-0 bg-[#0A0F1A]" />
+                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#0066CC] blur-[150px] opacity-10 rounded-full" />
+                    <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#004D99] blur-[200px] opacity-8 rounded-full" />
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10">
@@ -60,10 +60,10 @@ export default function AboutPage() {
                             transition={{ duration: 0.8 }}
                         >
                             <span className="text-primary font-bold uppercase tracking-[0.3em] text-[9px] mb-2 block">The Team Behind the Magic</span>
-                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display uppercase text-secondary mb-4 leading-[1.1] font-bold">
+                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display uppercase text-white mb-4 leading-[1.1] font-bold">
                                 We Are <span className="text-primary italic">Vsaf Adz</span>
                             </h1>
-                            <p className="text-secondary/60 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+                            <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
                                 A premier creative agency dedicated to transforming visions into reality through strategic branding, high-end fabrication, and innovative digital solutions.
                             </p>
                         </motion.div>
@@ -89,13 +89,13 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="p-10 rounded-[2.5rem] bg-surface border border-transparent hover:border-primary/20 hover:premium-shadow transition-all group"
+                                className="p-10 rounded-[2.5rem] bg-secondary border border-transparent hover:border-primary/20 hover:premium-shadow transition-all group"
                             >
-                                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-white mb-6 group-hover:bg-primary group-hover:text-white transition-all">
                                     {value.icon}
                                 </div>
-                                <h3 className="text-2xl font-display uppercase text-secondary mb-4 font-bold">{value.title}</h3>
-                                <p className="text-secondary/60 text-sm leading-relaxed">{value.description}</p>
+                                <h3 className="text-2xl font-display uppercase text-white mb-4 font-bold">{value.title}</h3>
+                                <p className="text-white/90 text-sm leading-relaxed">{value.description}</p>
                             </motion.div>
                         ))}
                     </div>

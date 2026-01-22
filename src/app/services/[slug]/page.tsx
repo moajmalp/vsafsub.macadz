@@ -30,11 +30,11 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
             <Navbar />
 
             {/* Hero Section - Matching Career Style */}
-            <section className="relative pt-24 pb-16 bg-white overflow-hidden">
+            <section className="relative pt-24 pb-16 bg-black overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[#F0F9FF]" />
-                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#BAE6FD] blur-[150px] opacity-20 rounded-full" />
-                    <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#60A5FA] blur-[200px] opacity-10 rounded-full" />
+                    <div className="absolute inset-0 bg-[#0A0F1A]" />
+                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#0066CC] blur-[150px] opacity-10 rounded-full" />
+                    <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#004D99] blur-[200px] opacity-8 rounded-full" />
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10">
@@ -54,12 +54,12 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                             transition={{ duration: 0.8 }}
                         >
                             <span className="text-primary font-bold uppercase tracking-[0.3em] text-[9px] mb-2 block">Our Specialties</span>
-                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display uppercase text-secondary mb-4 leading-[1.1] font-bold">
+                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display uppercase text-white mb-4 leading-[1.1] font-bold">
                                 {service.title.split(' ').map((word, i) => (
                                     i === 1 ? <span key={i} className="text-primary italic">{word} </span> : word + ' '
                                 ))}
                             </h1>
-                            <p className="text-secondary/60 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+                            <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
                                 {service.description}
                             </p>
                         </motion.div>

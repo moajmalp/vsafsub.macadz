@@ -27,7 +27,7 @@ export default function Portfolio() {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col items-center mb-20 text-center">
                     <span className="text-primary font-bold uppercase tracking-[0.3em] text-[12px] mb-4">Our Creative Portfolio</span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase tracking-tight text-secondary">Featured Projects</h2>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase tracking-tight text-white">EXECUTED PROJECTS</h2>
                 </div>
 
                 {/* Filters */}

@@ -54,7 +54,10 @@ export default function Navbar() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="relative group text-secondary/70 hover:text-primary text-[13px] font-bold transition-all uppercase tracking-[0.15em]"
+                            className={cn(
+                                "relative group text-[13px] font-bold transition-all uppercase tracking-[0.15em] hover:text-primary",
+                                isScrolled ? "text-secondary/70" : "text-white"
+                            )}
                         >
                             {item.name}
                             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
@@ -62,7 +65,7 @@ export default function Navbar() {
                     ))}
                     <Link
                         href="/contact"
-                        className="bg-primary hover:bg-primary-dark text-white px-8 py-3 text-[12px] font-bold uppercase tracking-[0.2em] transition-all rounded-full shadow-lg shadow-primary/20"
+                        className="bg-primary hover:bg-secondary text-white px-8 py-3 text-[12px] font-bold uppercase tracking-[0.2em] transition-all rounded-full shadow-lg shadow-primary/20"
                     >
                         Inquire Now
                     </Link>
@@ -70,7 +73,10 @@ export default function Navbar() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="lg:hidden text-secondary p-2 transition-colors hover:text-primary"
+                    className={cn(
+                        "lg:hidden p-2 transition-colors hover:text-primary",
+                        isScrolled ? "text-secondary" : "text-white"
+                    )}
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                     {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

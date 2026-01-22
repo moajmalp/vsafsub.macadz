@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
-
+import { Oswald, Inter } from "next/font/google";
 import "./globals.css";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Vsaf Adz | Better Ideas for Your Better Growth",
   description: "Innovative advertising solutions that get your brand seen, remembered and delivered.",
@@ -13,13 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="font-sans antialiased bg-white text-gray-900" suppressHydrationWarning>
+      <body className={`${oswald.variable} ${inter.variable} antialiased bg-black text-white`} suppressHydrationWarning>
         {children}
       </body>
     </html>
