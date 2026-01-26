@@ -69,9 +69,9 @@ export default function ContactForm() {
 
     return (
         <section id="contact" className="w-full pt-16 md:pt-20 pb-16 md:pb-20 bg-surface relative overflow-hidden">
-            {/* Premium Background Effects - Subtle Blue Glow */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[200px] pointer-events-none" />
+            {/* Premium Background Effects - Purple Gradient Glow */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#6a0eac]/5 to-transparent pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] gradient-purple-radial opacity-10 blur-[200px] pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Main Heading */}
@@ -122,7 +122,7 @@ export default function ContactForm() {
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                         className="bg-white rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-2xl relative"
                         style={{
-                            boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 102, 204, 0.1)"
+                            boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(106, 14, 172, 0.1)"
                         }}
                     >
                     {/* Card Header */}

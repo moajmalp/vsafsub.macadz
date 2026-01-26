@@ -6,16 +6,15 @@
   --font-sans: var(--font-inter);
   --font-display: var(--font-oswald);
 
-  /* Dark Blue Design System */
-  --color-primary: #0066CC;
-  /* Darker Blue */
-  --color-primary-dark: #004D99;
+  /* Purple Gradient Design System */
+  --color-primary: #6a0eac;
+  /* Darker Purple */
+  --color-primary-dark: #3a0b9f;
   --color-secondary: #0F1728;
-  /* Sophisticated Navy */
-  --color-accent: #1E3A5F;
-  /* Dark Blue Accent */
-  --color-surface: #0A0F1A;
+  /* Sophisticated Purple Accent */
+  --color-accent: #4a1a7f;
   /* Dark Backdrop */
+  --color-surface: #050505;
 
   --animate-marquee: marquee 15s linear infinite;
 
@@ -62,7 +61,7 @@
   /* Custom Scrollbar Styles - Webkit (Chrome, Safari, Edge) */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #0066CC #0A0F1A;
+    scrollbar-color: #6a0eac #050505;
   }
 
   *::-webkit-scrollbar {
@@ -71,28 +70,28 @@
   }
 
   *::-webkit-scrollbar-track {
-    background: #0A0F1A;
+    background: #050505;
     border-radius: 10px;
   }
 
   *::-webkit-scrollbar-thumb {
-    background: #0066CC;
+    background: linear-gradient(180deg, #6a0eac 0%, #3a0b9f 100%);
     border-radius: 10px;
-    border: 2px solid #0A0F1A;
+    border: 2px solid #050505;
   }
 
   *::-webkit-scrollbar-thumb:hover {
-    background: #004D99;
+    background: linear-gradient(180deg, #7a1ebc 0%, #4a1baf 100%);
   }
 
   *::-webkit-scrollbar-corner {
-    background: #0A0F1A;
+    background: #050505;
   }
 
   /* Custom Select/Dropdown Styles */
   select {
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%230066CC' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236a0eac' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 12px;
@@ -106,8 +105,8 @@
 
   select:focus {
     outline: none;
-    border-color: #0066CC;
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+    border-color: #6a0eac;
+    box-shadow: 0 0 0 3px rgba(106, 14, 172, 0.1);
   }
 }
 
@@ -116,8 +115,24 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark;
   }
 
+  .gradient-purple {
+    background: linear-gradient(135deg, #6a0eac 0%, #3a0b9f 50%, #050505 100%);
+  }
+
+  .gradient-purple-horizontal {
+    background: linear-gradient(90deg, #6a0eac 0%, #3a0b9f 50%, #050505 100%);
+  }
+
+  .gradient-purple-vertical {
+    background: linear-gradient(180deg, #6a0eac 0%, #3a0b9f 50%, #050505 100%);
+  }
+
+  .gradient-purple-radial {
+    background: radial-gradient(circle, #6a0eac 0%, #3a0b9f 50%, #050505 100%);
+  }
+
   .premium-shadow {
-    box-shadow: 0 20px 40px -15px rgba(0, 163, 255, 0.1);
+    box-shadow: 0 20px 40px -15px rgba(106, 14, 172, 0.2);
   }
 
   .glass-card {
@@ -131,7 +146,7 @@
   /* Custom Scrollbar Container */
   .custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: #0066CC #0A0F1A;
+    scrollbar-color: #6a0eac #050505;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -140,18 +155,18 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: #0A0F1A;
+    background: #050505;
     border-radius: 10px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #0066CC;
+    background: linear-gradient(180deg, #6a0eac 0%, #3a0b9f 100%);
     border-radius: 10px;
-    border: 1px solid #0A0F1A;
+    border: 1px solid #050505;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #004D99;
+    background: linear-gradient(180deg, #7a1ebc 0%, #4a1baf 100%);
   }
 
   /* Custom Dropdown/Select Styling */
@@ -167,12 +182,12 @@
   }
 
   .custom-select:hover {
-    border-color: #0066CC;
+    border-color: #6a0eac;
   }
 
   .custom-select:focus {
     outline: none;
-    border-color: #0066CC;
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+    border-color: #6a0eac;
+    box-shadow: 0 0 0 3px rgba(106, 14, 172, 0.1);
   }
 }

@@ -122,7 +122,7 @@ export default function Navbar() {
                         <PillNav
                             navItems={NAV_ITEMS}
                             baseColor={isOverLightBackground ? "rgba(255, 255, 255, 0.9)" : "rgba(255, 255, 255, 0.15)"}
-                            pillColor="#0066CC"
+                            pillColor="#6a0eac"
                             textColor={isOverLightBackground ? "#1a1a1a" : "#ffffff"}
                             activeTextColor={isOverLightBackground ? "#1a1a1a" : "#ffffff"}
                         />

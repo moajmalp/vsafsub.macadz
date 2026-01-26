@@ -54,9 +54,9 @@ export default function CareerPage() {
             {/* Hero Section */}
             <section className="relative pt-24 pb-16 bg-black overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[#0A0F1A]" />
-                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#0066CC] blur-[150px] opacity-10 rounded-full" />
-                    <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#004D99] blur-[200px] opacity-8 rounded-full" />
+                    <div className="absolute inset-0 bg-[#050505]" />
+                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#6a0eac] blur-[150px] opacity-10 rounded-full" />
+                    <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#3a0b9f] blur-[200px] opacity-8 rounded-full" />
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10">

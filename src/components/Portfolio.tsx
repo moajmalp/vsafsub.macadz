@@ -29,8 +29,8 @@ export default function Portfolio() {
         <section id="portfolio" className="py-16 md:py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500 rounded-full blur-3xl" />
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#6a0eac] rounded-full blur-3xl" />
+                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#3a0b9f] rounded-full blur-3xl" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
@@ -43,7 +43,7 @@ export default function Portfolio() {
                     transition={{ duration: 0.8 }}
                 >
                     <motion.span 
-                        className="inline-block text-blue-400 font-semibold uppercase tracking-[0.3em] text-sm mb-6"
+                        className="inline-block text-primary font-semibold uppercase tracking-[0.3em] text-sm mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -84,7 +84,7 @@ export default function Portfolio() {
                                 relative px-6 py-3 rounded-full text-sm font-semibold uppercase tracking-wider
                                 transition-all duration-300 overflow-hidden
                                 ${activeCategory === category
-                                    ? "bg-blue-600 text-white shadow-lg shadow-blue-600/30"
+                                    ? "bg-primary text-white shadow-lg shadow-primary/30"
                                     : "bg-white/10 text-gray-300 hover:text-white hover:bg-white/20 backdrop-blur-sm border border-white/10"
                                 }
                             `}
@@ -162,7 +162,7 @@ export default function Portfolio() {
                                     {/* Category Badge */}
                                     <div className="absolute top-4 left-4">
                                         <motion.span 
-                                            className="bg-blue-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold"
+                                            className="bg-primary/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold"
                                             initial={{ opacity: 0, x: -20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
@@ -212,7 +212,7 @@ export default function Portfolio() {
 
                                 {/* Animated Border */}
                                 <motion.div
-                                    className="absolute inset-0 border-2 border-blue-400/50 rounded-2xl opacity-0 group-hover:opacity-100"
+                                    className="absolute inset-0 border-2 border-primary/50 rounded-2xl opacity-0 group-hover:opacity-100"
                                     initial={false}
                                     animate={hoveredItem === item.id ? { opacity: 1 } : { opacity: 0 }}
                                     transition={{ duration: 0.3 }}
@@ -234,7 +234,7 @@ export default function Portfolio() {
                         <motion.button
                             whileHover={{ scale: 1.05, y: -2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full font-semibold text-sm uppercase tracking-wider shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition-all duration-300"
+                            className="bg-gradient-to-r from-[#6a0eac] to-[#3a0b9f] text-white px-8 py-4 rounded-full font-semibold text-sm uppercase tracking-wider shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300"
                         >
                             View All Projects
                         </motion.button>

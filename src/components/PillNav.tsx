@@ -24,7 +24,7 @@ export default function PillNav({
   logo,
   logoAlt = "Company Logo",
   baseColor = "#ffffff",
-  pillColor = "#0066CC", // Blue color for hover
+  pillColor = "#6a0eac", // Purple color for hover
   textColor = "#ffffff",
   activeTextColor = "#ffffff", // White text for active state
 }: PillNavProps) {
@@ -102,7 +102,7 @@ export default function PillNav({
           style={{ 
             backgroundColor: pillColor, 
             borderRadius: '9999px',
-            boxShadow: `0 4px 15px rgba(0, 102, 204, 0.3)`,
+            boxShadow: `0 4px 15px rgba(106, 14, 172, 0.3)`,
             opacity: 0,
           }}
         />
