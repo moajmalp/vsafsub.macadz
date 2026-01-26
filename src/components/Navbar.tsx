@@ -19,21 +19,90 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isOverLightBackground, setIsOverLightBackground] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
+            
+            // Detect if navbar is over a light background
+            const checkBackgroundColor = () => {
+                // Check multiple points to get better accuracy
+                const checkPoints = [
+                    { x: window.innerWidth / 2, y: 80 },
+                    { x: window.innerWidth / 4, y: 80 },
+                    { x: (window.innerWidth * 3) / 4, y: 80 },
+                ];
+                
+                let totalBrightness = 0;
+                let validChecks = 0;
+                
+                checkPoints.forEach(point => {
+                    const element = document.elementFromPoint(point.x, point.y);
+                    
+                    if (element) {
+                        const styles = window.getComputedStyle(element);
+                        let bgColor = styles.backgroundColor;
+                        
+                        // Handle rgba/rgb colors
+                        const rgbMatch = bgColor.match(/(\d+\.?\d*)/g);
+                        if (rgbMatch && rgbMatch.length >= 3) {
+                            const r = parseFloat(rgbMatch[0]);
+                            const g = parseFloat(rgbMatch[1]);
+                            const b = parseFloat(rgbMatch[2]);
+                            const a = rgbMatch[3] ? parseFloat(rgbMatch[3]) : 1;
+                            
+                            // If alpha is very low, check parent element
+                            if (a < 0.1 && element.parentElement) {
+                                const parentStyles = window.getComputedStyle(element.parentElement);
+                                bgColor = parentStyles.backgroundColor;
+                                const parentRgb = bgColor.match(/(\d+\.?\d*)/g);
+                                if (parentRgb && parentRgb.length >= 3) {
+                                    totalBrightness += (parseFloat(parentRgb[0]) + parseFloat(parentRgb[1]) + parseFloat(parentRgb[2])) / 3;
+                                    validChecks++;
+                                }
+                            } else {
+                                totalBrightness += (r + g + b) / 3;
+                                validChecks++;
+                            }
+                        }
+                    }
+                });
+                
+                if (validChecks > 0) {
+                    const avgBrightness = totalBrightness / validChecks;
+                    // If average brightness > 180, consider it a light background
+                    setIsOverLightBackground(avgBrightness > 180);
+                }
+            };
+            
+            // Use requestAnimationFrame for smoother updates
+            requestAnimationFrame(() => {
+                checkBackgroundColor();
+            });
         };
+        
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleScroll);
+        handleScroll(); // Initial check
+        
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleScroll);
+        };
     }, []);
 
     return (
         <>
             {/* Desktop Pill Navigation */}
             <div className="hidden lg:block fixed top-5 left-0 right-0 z-50 px-6">
-                <div className="flex items-center justify-between max-w-7xl mx-auto gap-4">
+                <div className={cn(
+                    "flex items-center justify-between max-w-7xl mx-auto gap-4 backdrop-blur-xl rounded-full px-6 py-3 shadow-lg transition-all duration-300",
+                    isOverLightBackground 
+                        ? "bg-white/90 border border-gray-200/50 shadow-black/5" 
+                        : "bg-white/10 border border-white/20 shadow-black/10"
+                )}>
                     {/* Logo with Blue Background */}
                     <Link 
                         href="/" 
@@ -52,10 +121,10 @@ export default function Navbar() {
                     <div className="flex-1 flex justify-center">
                         <PillNav
                             navItems={NAV_ITEMS}
-                            baseColor={isScrolled ? "rgba(255, 255, 255, 0.9)" : "rgba(255, 255, 255, 0.95)"}
+                            baseColor={isOverLightBackground ? "rgba(255, 255, 255, 0.9)" : "rgba(255, 255, 255, 0.15)"}
                             pillColor="#0066CC"
-                            textColor={isScrolled ? "#1a1a1a" : "#1a1a1a"}
-                            activeTextColor="#1a1a1a"
+                            textColor={isOverLightBackground ? "#1a1a1a" : "#ffffff"}
+                            activeTextColor={isOverLightBackground ? "#1a1a1a" : "#ffffff"}
                         />
                     </div>
 
@@ -74,7 +143,9 @@ export default function Navbar() {
                 className={cn(
                     "lg:hidden fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-6",
                     isScrolled
-                        ? "bg-white/80 backdrop-blur-lg border-b border-primary/10 py-4 shadow-sm"
+                        ? isOverLightBackground
+                            ? "bg-white/90 backdrop-blur-xl border-b border-gray-200/50 py-4 shadow-lg shadow-black/5"
+                            : "bg-white/10 backdrop-blur-xl border-b border-white/20 py-4 shadow-lg shadow-black/10"
                         : "bg-transparent"
                 )}
             >
@@ -96,7 +167,9 @@ export default function Navbar() {
                     <button
                         className={cn(
                             "p-2 transition-colors hover:text-primary",
-                            isScrolled ? "text-secondary" : "text-white"
+                            isScrolled 
+                                ? isOverLightBackground ? "text-secondary" : "text-white"
+                                : "text-white"
                         )}
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >

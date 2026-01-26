@@ -55,7 +55,7 @@ export default function Locations() {
             <div className="container mx-auto px-6 relative z-10">
                 {/* Header */}
                 <motion.div 
-                    className="text-center mb-16 md:mb-20"
+                    className="text-center mb-12 md:mb-16"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -71,7 +71,7 @@ export default function Locations() {
                         Global Presence
                     </motion.span>
                     <motion.h2 
-                        className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display uppercase font-black text-white leading-tight"
+                        className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display uppercase font-black text-white leading-tight"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}

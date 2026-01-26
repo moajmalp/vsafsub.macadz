@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Send, Mail, Phone, FileText, MessageSquare } from "lucide-react";
+import { Send, Mail, Phone, FileText, MessageSquare, Sparkles, Zap, Target, Rocket } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -26,7 +26,6 @@ const fieldVariants = {
         transition: {
             duration: 0.5,
             delay: i * 0.1,
-            ease: [0.22, 1, 0.36, 1],
         },
     }),
 };
@@ -69,7 +68,7 @@ export default function ContactForm() {
     };
 
     return (
-        <section id="contact" className="w-full pt-20 md:pt-28 pb-20 md:pb-28 bg-surface relative overflow-hidden">
+        <section id="contact" className="w-full pt-16 md:pt-20 pb-16 md:pb-20 bg-surface relative overflow-hidden">
             {/* Premium Background Effects - Subtle Blue Glow */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[200px] pointer-events-none" />
@@ -81,7 +80,7 @@ export default function ContactForm() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                    className="text-center mb-12 md:mb-16"
+                    className="text-center mb-8 md:mb-12"
                 >
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
@@ -92,12 +91,12 @@ export default function ContactForm() {
                     >
                         Direct Message
                     </motion.span>
-                    <motion.h2
+                    <motion.h4
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, delay: 0.3 }}
-                        className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-display uppercase font-black text-white leading-[1.05] tracking-tight"
+                        className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display uppercase font-black text-white leading-[1.05] tracking-tight"
                     >
                         Send Us A{" "}
                         <span className="text-primary relative inline-block">
@@ -110,20 +109,22 @@ export default function ContactForm() {
                                 transition={{ duration: 0.8, delay: 0.6 }}
                             />
                         </span>
-                    </motion.h2>
+                    </motion.h4>
                 </motion.div>
 
-                {/* Form Card - Pure White */}
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                    className="max-w-3xl mx-auto bg-white rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-2xl relative"
-                    style={{
-                        boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 102, 204, 0.1)"
-                    }}
-                >
+                {/* Two Column Layout - Form and Creative Content */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    {/* Left Side - Form Card */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                        className="bg-white rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-2xl relative"
+                        style={{
+                            boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 102, 204, 0.1)"
+                        }}
+                    >
                     {/* Card Header */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -387,7 +388,150 @@ export default function ContactForm() {
                             </motion.div>
                         )}
                     </form>
-                </motion.div>
+                    </motion.div>
+
+                    {/* Right Side - Creative Content Section */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                        className="relative"
+                    >
+                        {/* Creative Content Card */}
+                        <div className="h-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-12 lg:p-16 border border-white/10 relative overflow-hidden">
+                            {/* Animated Background Elements */}
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                            <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/15 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
+                            
+                            <div className="relative z-10 h-full flex flex-col justify-between">
+                                {/* Top Section - Main Content */}
+                                <div className="space-y-8">
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.6, delay: 0.3 }}
+                                        className="text-center"
+                                    >
+                                        <motion.span
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.5, delay: 0.4 }}
+                                            className="text-primary font-bold uppercase tracking-[0.3em] text-[10px] md:text-[11px] mb-4 block"
+                                        >
+                                            Why Choose Us
+                                        </motion.span>
+                                        <motion.h3
+                                            initial={{ opacity: 0, y: 10 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.6, delay: 0.5 }}
+                                            className="text-2xl md:text-3xl lg:text-4xl font-display uppercase font-black text-white leading-[1.1] mb-6"
+                                        >
+                                            Let's Build Something{" "}
+                                            <span className="text-primary relative inline-block">
+                                                Extraordinary
+                                                <motion.span
+                                                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
+                                                    initial={{ scaleX: 0 }}
+                                                    whileInView={{ scaleX: 1 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.8, delay: 0.8 }}
+                                                />
+                                            </span>
+                                        </motion.h3>
+                                        <motion.p
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.6, delay: 0.6 }}
+                                            className="text-white/70 text-sm md:text-base leading-relaxed"
+                                        >
+                                            Transform your vision into reality with our cutting-edge advertising solutions. We combine creativity, strategy, and innovation to deliver exceptional results.
+                                        </motion.p>
+                                    </motion.div>
+
+                                    {/* Feature Cards */}
+                                    <div className="space-y-4">
+                                        {[
+                                            { icon: Sparkles, title: "Creative Excellence", desc: "Award-winning designs that captivate audiences" },
+                                            { icon: Target, title: "Strategic Approach", desc: "Data-driven strategies for maximum impact" },
+                                            { icon: Rocket, title: "Innovation First", desc: "Latest technology and fabrication techniques" },
+                                        ].map((feature, index) => (
+                                            <motion.div
+                                                key={feature.title}
+                                                initial={{ opacity: 0, x: -20 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                viewport={{ once: true }}
+                                                transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
+                                                className="group bg-white/5 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:bg-white/10"
+                                            >
+                                                <div className="flex items-start gap-4">
+                                                    <motion.div
+                                                        whileHover={{ rotate: 360, scale: 1.1 }}
+                                                        transition={{ duration: 0.6 }}
+                                                        className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors"
+                                                    >
+                                                        <feature.icon className="w-6 h-6 text-primary" />
+                                                    </motion.div>
+                                                    <div className="flex-1">
+                                                        <h4 className="text-white font-bold text-sm md:text-base mb-1 uppercase tracking-wide">
+                                                            {feature.title}
+                                                        </h4>
+                                                        <p className="text-white/60 text-xs md:text-sm leading-relaxed">
+                                                            {feature.desc}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Bottom Section - Stats or CTA */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.6, delay: 1 }}
+                                    className="mt-8 pt-8 border-t border-white/10"
+                                >
+                                    <div className="grid grid-cols-3 gap-4">
+                                        {[
+                                            { number: "10K+", label: "Projects" },
+                                            { number: "5K+", label: "Clients" },
+                                            { number: "8+", label: "Countries" },
+                                        ].map((stat, index) => (
+                                            <motion.div
+                                                key={stat.label}
+                                                initial={{ opacity: 0, scale: 0.8 }}
+                                                whileInView={{ opacity: 1, scale: 1 }}
+                                                viewport={{ once: true }}
+                                                transition={{ duration: 0.5, delay: 1.1 + index * 0.1 }}
+                                                className="text-center"
+                                            >
+                                                <motion.div
+                                                    className="text-2xl md:text-3xl font-display font-black text-primary mb-1"
+                                                    initial={{ opacity: 0 }}
+                                                    whileInView={{ opacity: 1 }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
+                                                >
+                                                    {stat.number}
+                                                </motion.div>
+                                                <div className="text-white/60 text-[10px] md:text-xs font-bold uppercase tracking-widest">
+                                                    {stat.label}
+                                                </div>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

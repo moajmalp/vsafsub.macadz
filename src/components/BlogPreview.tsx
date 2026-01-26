@@ -24,7 +24,6 @@ const itemVariants = {
         y: 0,
         transition: {
             duration: 0.6,
-            ease: [0.22, 1, 0.36, 1],
         },
     },
 };
@@ -33,7 +32,7 @@ export default function BlogPreview() {
     const POSTS = getAllBlogs().slice(0, 3); // Show only first 3 posts
 
     return (
-        <section id="blogs" className="py-16 md:py-24 bg-surface relative overflow-hidden">
+        <section id="blogs" className="py-12 md:py-16 bg-surface relative overflow-hidden">
             {/* Premium Background Effects */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
@@ -57,7 +56,7 @@ export default function BlogPreview() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-8"
+                        className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 gap-6"
                     >
                         <div className="text-center md:text-left space-y-3">
                             <motion.span
@@ -195,12 +194,12 @@ export default function BlogPreview() {
 
                                         {/* Content */}
                                         <div className="flex-1 flex flex-col">
-                                            <h3 className="text-xl lg:text-2xl xl:text-3xl font-display uppercase leading-[1.2] text-secondary group-hover:text-primary transition-all duration-500 font-bold mb-4 line-clamp-3">
+                                            <h3 className="text-base md:text-lg lg:text-xl font-display leading-[1.3] text-secondary group-hover:text-primary transition-all duration-500 font-semibold mb-3 line-clamp-3">
                                                 {post.title}
                                             </h3>
                                             
                                             {/* Excerpt */}
-                                            <p className="text-secondary/70 text-sm leading-relaxed mb-5 line-clamp-2 group-hover:text-secondary/90 transition-colors duration-300">
+                                            <p className="text-secondary/70 text-sm leading-relaxed mb-4 line-clamp-2 group-hover:text-secondary/90 transition-colors duration-300">
                                                 {post.excerpt}
                                             </p>
 

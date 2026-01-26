@@ -15,7 +15,7 @@ export default function About() {
         <section id="about" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
             <div className="container mx-auto px-6 max-w-7xl">
                 {/* Main Header Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-12">
                     {/* Left - Main Question */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -24,7 +24,7 @@ export default function About() {
                         transition={{ duration: 0.8 }}
                     >
                         <motion.h2 
-                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+                            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}

@@ -21,7 +21,7 @@ export default function CommitmentSection() {
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Top Section - Stats and Mission */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 mb-16 md:mb-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 mb-12 md:mb-16">
                     {/* Left Side - Statistics */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -77,7 +77,7 @@ export default function CommitmentSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.4 }}
-                                className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-primary mb-2"
+                                className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-primary mb-2"
                             >
                                 {STATS[1].number}
                             </motion.div>
@@ -105,7 +105,7 @@ export default function CommitmentSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.5 }}
-                                className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-primary mb-2"
+                                className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-primary mb-2"
                             >
                                 {STATS[2].number}
                             </motion.div>

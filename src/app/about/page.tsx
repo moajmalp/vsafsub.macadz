@@ -61,7 +61,7 @@ export default function AboutPage() {
                             transition={{ duration: 0.8 }}
                         >
                             <span className="text-primary font-bold uppercase tracking-[0.3em] text-[9px] mb-2 block">The Team Behind the Magic</span>
-                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display uppercase text-white mb-4 leading-[1.1] font-bold">
+                            <h1 className="text-2xl md:text-4xl lg:text-5xl font-display uppercase text-white mb-4 leading-[1.1] font-bold">
                                 We Are <span className="text-primary italic">Vsaf Adz</span>
                             </h1>
                             <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">

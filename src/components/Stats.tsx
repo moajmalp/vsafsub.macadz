@@ -128,7 +128,7 @@ function StatCounter({ stat, index }: StatCounterProps) {
 
 export default function Stats() {
     return (
-        <section className="py-20 md:py-28 bg-surface relative overflow-hidden">
+        <section className="py-16 md:py-20 bg-surface relative overflow-hidden">
             {/* Background Effects */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl" />
@@ -142,7 +142,7 @@ export default function Stats() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-12 md:mb-16 max-w-4xl mx-auto"
+                    className="text-center mb-10 md:mb-12 max-w-4xl mx-auto"
                 >
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

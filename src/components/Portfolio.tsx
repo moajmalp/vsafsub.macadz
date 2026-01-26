@@ -26,7 +26,7 @@ export default function Portfolio() {
         : ITEMS.filter(item => item.category === activeCategory);
 
     return (
-        <section id="portfolio" className="py-20 md:py-32 bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden">
+        <section id="portfolio" className="py-16 md:py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
@@ -64,7 +64,7 @@ export default function Portfolio() {
 
                 {/* Filter Buttons */}
                 <motion.div 
-                    className="flex flex-wrap justify-center gap-4 mb-16"
+                    className="flex flex-wrap justify-center gap-4 mb-12"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

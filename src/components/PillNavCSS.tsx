@@ -24,8 +24,8 @@ export default function PillNavCSS({
   logoAlt = "Company Logo",
   baseColor = "#ffffff",
   pillColor = "#0066CC", // Blue color for hover
-  textColor = "#000000",
-  activeTextColor = "#000000", // Black text for active state
+  textColor = "#ffffff",
+  activeTextColor = "#ffffff", // White text for active state
 }: PillNavProps) {
   const pathname = usePathname();
   const navRef = useRef<HTMLDivElement>(null);
@@ -80,7 +80,7 @@ export default function PillNavCSS({
                 <Link 
                   href={item.href} 
                   style={{ 
-                    color: textColor, // Always black text
+                    color: textColor, // White text
                     textDecoration: 'none',
                     borderBottom: isActive ? `2px solid ${pillColor}` : 'none',
                     paddingBottom: isActive ? '2px' : '0',
