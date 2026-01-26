@@ -93,11 +93,11 @@ export default function ContactPage() {
     };
 
     return (
-        <main className="min-h-screen bg-[#F0F8F6]">
+        <main className="min-h-screen bg-[#0f172a]">
             <Navbar />
 
             {/* Header Section */}
-            <section className="pt-24 pb-12 md:pt-32 md:pb-16">
+            <section className="pt-24 pb-12 md:pb-16">
                 <div className="container mx-auto px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -117,7 +117,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.3 }}
-                            className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-secondary mb-6"
+                            className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-white mb-6"
                         >
                             Contact Us
                         </motion.h1>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.4 }}
-                            className="text-secondary/70 text-base md:text-lg leading-relaxed"
+                            className="text-white/70 text-base md:text-lg leading-relaxed"
                         >
                             Contact VSAF ADZ for project inquiries, service details, and creative solutions in branding, advertising, and fabrication services.
                         </motion.p>

@@ -123,8 +123,8 @@ export default function Navbar() {
                             navItems={NAV_ITEMS}
                             baseColor={isOverLightBackground ? "rgba(255, 255, 255, 0.9)" : "rgba(255, 255, 255, 0.15)"}
                             pillColor="#6a0eac"
-                            textColor={isOverLightBackground ? "#1a1a1a" : "#ffffff"}
-                            activeTextColor={isOverLightBackground ? "#1a1a1a" : "#ffffff"}
+                            textColor={isOverLightBackground ? "#0f172a" : "#ffffff"}
+                            activeTextColor={isOverLightBackground ? "#0f172a" : "#ffffff"}
                         />
                     </div>
 

@@ -80,12 +80,12 @@ export default function PillNavCSS({
                 <Link 
                   href={item.href} 
                   style={{ 
-                    color: textColor, // White text
+                    color: isActive ? activeTextColor : textColor,
                     textDecoration: 'none',
                     borderBottom: isActive ? `2px solid ${pillColor}` : 'none',
                     paddingBottom: isActive ? '2px' : '0',
                   }}
-                  className="block transition-all duration-300"
+                  className="block transition-all duration-300 !text-inherit"
                 >
                   {item.label}
                 </Link>
