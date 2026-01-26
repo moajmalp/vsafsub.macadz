@@ -33,7 +33,8 @@ declare module "next/font/google" {
 }
 
 declare module "next/image" {
-  const Image: React.ComponentType<{
+  import { ComponentType, CSSProperties } from "react";
+  const Image: ComponentType<{
     src: string;
     alt: string;
     width?: number;
@@ -45,7 +46,7 @@ declare module "next/image" {
     placeholder?: "blur" | "empty";
     blurDataURL?: string;
     className?: string;
-    style?: React.CSSProperties;
+    style?: CSSProperties;
     [key: string]: any;
   }>;
   export default Image;

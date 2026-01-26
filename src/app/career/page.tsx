@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Briefcase, MapPin, Clock, ArrowRight, CheckCircle2, Star } from "lucide-react";
 

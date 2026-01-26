@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
 import Stats from "@/components/Stats";
+import CommitmentSection from "@/components/CommitmentSection";
 import { motion } from "framer-motion";
 import { Target, Users, Award, ShieldCheck } from "lucide-react";
 
@@ -73,6 +74,8 @@ export default function AboutPage() {
 
 
             <About />
+
+            <CommitmentSection />
 
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6">
