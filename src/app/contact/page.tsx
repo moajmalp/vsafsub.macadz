@@ -93,12 +93,17 @@ export default function ContactPage() {
     };
 
     return (
-        <main className="min-h-screen bg-[#0f172a]">
+        <main className="min-h-screen bg-brand-black">
             <Navbar />
 
             {/* Header Section */}
-            <section className="pt-24 pb-12 md:pb-16">
-                <div className="container mx-auto px-6">
+            <section className="relative pt-32 md:pt-48 pb-12 md:pb-16 bg-brand-black overflow-hidden px-6">
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-brand-purple/10 blur-[150px] rounded-full pointer-events-none" />
+                    <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-brand-deep/10 blur-[200px] rounded-full pointer-events-none" />
+                </div>
+
+                <div className="container mx-auto max-w-7xl relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -109,23 +114,23 @@ export default function ContactPage() {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="text-primary font-bold uppercase tracking-[0.3em] text-sm mb-4 block"
+                            className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block"
                         >
-                            Contact
+                            Get In Touch
                         </motion.span>
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.3 }}
-                            className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-white mb-6"
+                            className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white mb-6 uppercase leading-tight"
                         >
-                            Contact Us
+                            TALK TO <br /> <span className="text-gradient italic">OUR EXPERTS</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.4 }}
-                            className="text-white/70 text-base md:text-lg leading-relaxed"
+                            className="text-muted text-base md:text-lg leading-relaxed"
                         >
                             Contact VSAF ADZ for project inquiries, service details, and creative solutions in branding, advertising, and fabrication services.
                         </motion.p>
@@ -134,8 +139,11 @@ export default function ContactPage() {
             </section>
 
             {/* Main Content - Two Cards Side by Side */}
-            <section className="pb-12 md:pb-16">
-                <div className="container mx-auto px-6">
+            <section className="pb-12 md:pb-16 relative overflow-hidden">
+                <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-brand-purple/10 blur-[100px] rounded-full pointer-events-none" />
+                <div className="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-brand-deep/10 blur-[100px] rounded-full pointer-events-none" />
+
+                <div className="container mx-auto px-6 max-w-7xl relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12">
                         {/* Left Card - Contact Info */}
                         <motion.div
@@ -143,12 +151,12 @@ export default function ContactPage() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="bg-white rounded-3xl p-8 md:p-10 shadow-lg"
+                            className="glass-card rounded-[3rem] p-8 md:p-12 border border-white/5 shadow-2xl"
                         >
-                            <h2 className="text-xl md:text-2xl font-display font-black text-secondary mb-8 uppercase">
-                                Contact Info
+                            <h2 className="text-xl md:text-3xl font-display font-black text-white mb-10 uppercase tracking-tight">
+                                Contact <span className="text-brand-purple">Info</span>
                             </h2>
-                            <div className="space-y-6">
+                            <div className="space-y-8">
                                 {CONTACT_INFO.map((info, index) => {
                                     const Icon = info.icon;
                                     return (
@@ -161,17 +169,16 @@ export default function ContactPage() {
                                             whileInView={{ opacity: 1, y: 0 }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                                            className="flex items-start gap-4 group"
+                                            className="flex items-start gap-6 group"
                                         >
-                                            {/* Circular Icon with Light Blue Background */}
-                                            <div className="w-14 h-14 rounded-full bg-[#E3F2FD] flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-300">
-                                                <Icon className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
+                                            <div className="w-14 h-14 rounded-2xl bg-brand-purple/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-purple transition-all duration-500 border border-brand-purple/20 shadow-lg shadow-brand-purple/5">
+                                                <Icon className="w-6 h-6 text-brand-purple group-hover:text-white transition-colors duration-500" />
                                             </div>
                                             <div className="flex-1 pt-1">
-                                                <h3 className="font-bold text-secondary mb-2 text-sm md:text-base uppercase tracking-wide">
+                                                <h3 className="font-bold text-white mb-2 text-sm uppercase tracking-widest text-brand-purple/80">
                                                     {info.label}
                                                 </h3>
-                                                <p className="text-secondary/70 text-sm md:text-base leading-relaxed font-normal">
+                                                <p className="text-muted text-sm md:text-base leading-relaxed font-medium group-hover:text-white transition-colors">
                                                     {info.details}
                                                 </p>
                                             </div>
@@ -187,29 +194,28 @@ export default function ContactPage() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="bg-white rounded-3xl p-8 md:p-10 shadow-lg"
+                            className="glass-card rounded-[3rem] p-8 md:p-12 border border-white/5 shadow-2xl"
                         >
-                            <h2 className="text-2xl md:text-3xl font-display font-black text-secondary mb-2">
-                                Send a Message
+                            <h2 className="text-2xl md:text-3xl font-display font-black text-white mb-2 uppercase tracking-tight">
+                                Send a <span className="text-gradient italic">Message</span>
                             </h2>
-                            <p className="text-secondary/60 text-sm mb-8">
+                            <p className="text-muted text-sm mb-8">
                                 We'll get back to you within 24 hours.
                             </p>
 
-                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-                                {/* Name and Email Row */}
+                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                     <div className="space-y-2">
                                         <input
                                             {...register("name")}
                                             placeholder="Name"
                                             className={cn(
-                                                "w-full bg-white border border-secondary/20 rounded-xl px-5 py-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-secondary placeholder:text-secondary/50 text-sm font-medium",
-                                                errors.name && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                                                "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm font-medium",
+                                                errors.name && "border-red-500/50 focus:border-red-500"
                                             )}
                                         />
                                         {errors.name && (
-                                            <p className="text-red-500 text-xs ml-2">{errors.name.message}</p>
+                                            <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.name.message}</p>
                                         )}
                                     </div>
                                     <div className="space-y-2">
@@ -218,17 +224,16 @@ export default function ContactPage() {
                                             type="email"
                                             placeholder="Email"
                                             className={cn(
-                                                "w-full bg-white border border-secondary/20 rounded-xl px-5 py-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-secondary placeholder:text-secondary/50 text-sm font-medium",
-                                                errors.email && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                                                "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm font-medium",
+                                                errors.email && "border-red-500/50 focus:border-red-500"
                                             )}
                                         />
                                         {errors.email && (
-                                            <p className="text-red-500 text-xs ml-2">{errors.email.message}</p>
+                                            <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.email.message}</p>
                                         )}
                                     </div>
                                 </div>
 
-                                {/* Phone and Service Row */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                     <div className="space-y-2">
                                         <input
@@ -236,58 +241,61 @@ export default function ContactPage() {
                                             type="tel"
                                             placeholder="Phone"
                                             className={cn(
-                                                "w-full bg-white border border-secondary/20 rounded-xl px-5 py-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-secondary placeholder:text-secondary/50 text-sm font-medium",
-                                                errors.phone && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                                                "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm font-medium",
+                                                errors.phone && "border-red-500/50 focus:border-red-500"
                                             )}
                                         />
                                         {errors.phone && (
-                                            <p className="text-red-500 text-xs ml-2">{errors.phone.message}</p>
+                                            <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.phone.message}</p>
                                         )}
                                     </div>
                                     <div className="space-y-2">
-                                        <select
-                                            {...register("course")}
-                                            className={cn(
-                                                "w-full bg-white border border-secondary/20 rounded-xl px-5 py-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-secondary text-sm font-medium appearance-none",
-                                                errors.course && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-                                            )}
-                                        >
-                                            <option value="">Service Interested</option>
-                                            {SERVICES.map((service) => (
-                                                <option key={service} value={service}>
-                                                    {service}
-                                                </option>
-                                            ))}
-                                        </select>
+                                        <div className="relative">
+                                            <select
+                                                {...register("course")}
+                                                className={cn(
+                                                    "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white/50 text-sm font-medium appearance-none",
+                                                    errors.course && "border-red-500/50 focus:border-red-500"
+                                                )}
+                                            >
+                                                <option value="" className="bg-brand-black">Service Interested</option>
+                                                {SERVICES.map((service) => (
+                                                    <option key={service} value={service} className="bg-brand-black text-white">
+                                                        {service}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                            <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                <div className="w-2 h-2 border-r-2 border-b-2 border-white/20 rotate-45" />
+                                            </div>
+                                        </div>
                                         {errors.course && (
-                                            <p className="text-red-500 text-xs ml-2">{errors.course.message}</p>
+                                            <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.course.message}</p>
                                         )}
                                     </div>
                                 </div>
 
-                                {/* Message Field */}
                                 <div className="space-y-2">
                                     <textarea
                                         {...register("message")}
                                         rows={5}
                                         placeholder="Message"
                                         className={cn(
-                                            "w-full bg-white border border-secondary/20 rounded-xl px-5 py-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 text-secondary placeholder:text-secondary/50 text-sm font-medium resize-none",
-                                            errors.message && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                                            "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm font-medium resize-none",
+                                            errors.message && "border-red-500/50 focus:border-red-500"
                                         )}
                                     />
                                     {errors.message && (
-                                        <p className="text-red-500 text-xs ml-2">{errors.message.message}</p>
+                                        <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.message.message}</p>
                                     )}
                                 </div>
 
-                                {/* Submit Button */}
                                 <motion.button
                                     type="submit"
                                     disabled={isSubmitting}
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
-                                    className="w-full bg-primary hover:bg-primary-dark text-white py-4 rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed border-2 border-primary"
+                                    className="w-full btn-primary py-5 rounded-2xl text-[12px] flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed uppercase"
                                 >
                                     {isSubmitting ? (
                                         <>
@@ -306,14 +314,13 @@ export default function ContactPage() {
                                     )}
                                 </motion.button>
 
-                                {/* Success Message */}
                                 {isSuccess && (
                                     <motion.div
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        className="p-4 bg-green-500/10 border border-green-500/30 text-green-600 text-center rounded-xl text-sm font-medium"
+                                        className="p-4 bg-green-500/10 border border-green-500/30 text-green-400 text-center rounded-2xl text-[10px] font-bold uppercase tracking-widest"
                                     >
-                                        ✓ Success! We'll reach out to you shortly.
+                                        ✓ Success! We'll reach out shortly.
                                     </motion.div>
                                 )}
                             </form>
@@ -323,32 +330,30 @@ export default function ContactPage() {
             </section>
 
             {/* Map Section */}
-            <section className="pb-16 md:pb-24">
-                <div className="container mx-auto px-6">
+            <section className="pb-16 md:pb-24 relative z-10">
+                <div className="container mx-auto px-6 max-w-7xl">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="bg-white rounded-3xl p-8 md:p-10 shadow-lg"
+                        className="glass-card rounded-[3rem] p-4 md:p-6 border border-white/5 shadow-22xl relative overflow-hidden"
                     >
-                        <h2 className="text-2xl md:text-3xl font-display font-black text-secondary mb-6">
-                            Our Location
-                        </h2>
-                        <div className="w-full h-[400px] md:h-[500px] rounded-xl border-2 border-dashed border-secondary/20 flex items-center justify-center bg-secondary/5 relative overflow-hidden">
+                        <div className="w-full h-[400px] md:h-[600px] rounded-[2.5rem] relative overflow-hidden">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14842.227282717088!2d39.1866!3d21.5246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d01fb1137e59%3A0xe059579737b118db!2sJeddah%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
                                 width="100%"
                                 height="100%"
-                                style={{ border: 0 }}
+                                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
                                 allowFullScreen={true}
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                className="rounded-xl"
                             />
+                            {/* Overlay for premium feel */}
+                            <div className="absolute inset-0 pointer-events-none border-[12px] border-brand-black/10 rounded-[2.5rem]" />
                         </div>
-                        <p className="text-secondary/60 text-sm mt-4 text-center">
-                            Visit us at 8127 Abdullah Ibn Badr, Al-Sharafeyah, Jeddah 23218 Saudi Arabia
+                        <p className="text-muted text-[10px] mt-6 text-center font-bold uppercase tracking-[0.3em]">
+                            Our Headquarters: 8127 Abdullah Ibn Badr, Jeddah, KSA
                         </p>
                     </motion.div>
                 </div>

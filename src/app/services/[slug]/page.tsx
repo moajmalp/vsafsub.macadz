@@ -26,15 +26,14 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
     }
 
     return (
-        <main className="min-h-screen bg-surface">
+        <main className="min-h-screen bg-brand-black">
             <Navbar />
 
-            {/* Hero Section - Matching Career Style */}
-            <section className="relative pt-24 pb-16 bg-black overflow-hidden">
+            {/* Hero Section */}
+            <section className="relative pt-32 pb-20 bg-brand-black overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[#050505]" />
-                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#6a0eac] blur-[150px] opacity-10 rounded-full" />
-                    <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#3a0b9f] blur-[200px] opacity-8 rounded-full" />
+                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-brand-purple/10 blur-[150px] rounded-full" />
+                    <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-brand-deep/10 blur-[200px] rounded-full" />
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10">
@@ -43,9 +42,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4"
+                            className="w-12 h-12 rounded-xl bg-brand-purple/10 flex items-center justify-center text-brand-purple mb-6 border border-brand-purple/20"
                         >
-                            <Star size={20} />
+                            <Star size={24} />
                         </motion.div>
 
                         <motion.div
@@ -53,13 +52,13 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-primary font-bold uppercase tracking-[0.3em] text-[9px] mb-2 block">Our Specialties</span>
-                            <h1 className="text-2xl md:text-4xl lg:text-5xl font-display uppercase text-white mb-4 leading-[1.1] font-bold">
+                            <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Our Specialties</span>
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase text-white mb-6 leading-[1.1] font-black">
                                 {service.title.split(' ').map((word, i) => (
-                                    i === 1 ? <span key={i} className="text-primary italic">{word} </span> : word + ' '
+                                    i === 1 ? <span key={i} className="text-gradient italic">{word} </span> : word + ' '
                                 ))}
                             </h1>
-                            <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+                            <p className="text-muted text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                                 {service.description}
                             </p>
                         </motion.div>
@@ -78,17 +77,17 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-white rounded-[2.5rem] p-10 premium-shadow border border-primary/5"
+                            className="glass-card rounded-[2.5rem] p-10 border border-white/5"
                         >
-                            <h3 className="text-xl font-display uppercase tracking-wider text-secondary mb-8 font-bold">Internal Links</h3>
+                            <h3 className="text-xl font-display uppercase tracking-wider text-white mb-8 font-black">Internal Links</h3>
                             <div className="space-y-3">
                                 {services.filter((s) => s.slug !== slug).map((s) => (
                                     <Link
                                         key={s.slug}
                                         href={`/services/${s.slug}`}
-                                        className="flex items-center justify-between p-5 rounded-2xl transition-all duration-300 bg-secondary text-white border border-transparent hover:bg-white hover:text-primary hover:border-primary"
+                                        className="flex items-center justify-between p-5 rounded-2xl transition-all duration-300 bg-white/5 text-white border border-white/5 hover:bg-brand-purple hover:border-white/20 shadow-lg"
                                     >
-                                        <span className="font-bold uppercase text-[11px] tracking-widest">{s.title}</span>
+                                        <span className="font-bold uppercase text-[10px] tracking-widest">{s.title}</span>
                                         <ChevronRight size={16} />
                                     </Link>
                                 ))}
@@ -101,27 +100,27 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="bg-secondary rounded-[2.5rem] p-10 premium-shadow relative overflow-hidden text-white sticky top-28"
+                            className="glass-card rounded-[2.5rem] p-10 relative overflow-hidden text-white sticky top-28 border border-white/10"
                         >
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl rounded-full" />
-                            <h3 className="text-xl font-display uppercase tracking-wider mb-8 font-bold relative z-10">Get a Free Quote</h3>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-purple/20 blur-3xl rounded-full" />
+                            <h3 className="text-xl font-display uppercase tracking-wider mb-8 font-black relative z-10">Get a Free Quote</h3>
                             <form className="space-y-4 relative z-10">
                                 <input
                                     type="text"
                                     placeholder="Your Name"
-                                    className="w-full bg-white/10 border border-white/10 rounded-2xl px-6 py-4 focus:border-primary outline-none transition-all placeholder:text-white/30 text-sm"
+                                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple focus:bg-white/10 outline-none transition-all placeholder:text-white/20 text-sm"
                                 />
                                 <input
                                     type="email"
                                     placeholder="Email Address"
-                                    className="w-full bg-white/10 border border-white/10 rounded-2xl px-6 py-4 focus:border-primary outline-none transition-all placeholder:text-white/30 text-sm"
+                                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple focus:bg-white/10 outline-none transition-all placeholder:text-white/20 text-sm"
                                 />
                                 <textarea
                                     placeholder="Your Message"
                                     rows={4}
-                                    className="w-full bg-white/10 border border-white/10 rounded-2xl px-6 py-4 focus:border-primary outline-none transition-all placeholder:text-white/30 text-sm resize-none"
+                                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple focus:bg-white/10 outline-none transition-all placeholder:text-white/20 text-sm resize-none"
                                 />
-                                <button className="w-full bg-primary hover:bg-white hover:text-secondary text-secondary font-bold py-5 rounded-2xl uppercase tracking-[0.2em] text-[11px] transition-all shadow-xl shadow-primary/20">
+                                <button className="btn-primary w-full py-5 text-[11px] tracking-[0.2em] shadow-xl shadow-brand-purple/20">
                                     Submit Now
                                 </button>
                             </form>
@@ -135,7 +134,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="relative aspect-video w-full rounded-[3rem] overflow-hidden premium-shadow"
+                            className="relative aspect-video w-full rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl"
                         >
                             <Image
                                 src={service.image}
@@ -144,18 +143,16 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                                 className="object-cover"
                                 priority
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 66vw"
-                                quality={85}
-                                placeholder="blur"
-                                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                             />
+                            <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 via-transparent to-transparent" />
                         </motion.div>
 
                         {/* Text Content */}
                         <div className="space-y-8">
-                            <h2 className="text-4xl md:text-5xl font-display uppercase text-secondary font-bold leading-tight">
-                                <span className="text-primary italic">Overview</span>
+                            <h2 className="text-4xl md:text-5xl font-display uppercase text-white font-black leading-tight tracking-tight">
+                                <span className="text-gradient italic">Overview</span>
                             </h2>
-                            <p className="text-white text-lg leading-relaxed">
+                            <p className="text-white/90 text-lg leading-relaxed max-w-4xl">
                                 {service.content}
                             </p>
 
@@ -163,11 +160,11 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                             {service.benefits && (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
                                     {service.benefits.map((benefit, idx) => (
-                                        <div key={idx} className="flex items-center gap-4 bg-white p-6 rounded-2xl premium-shadow border border-primary/5">
-                                            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                        <div key={idx} className="flex items-center gap-4 glass-card p-6 rounded-2xl border border-white/5 group hover:border-brand-purple/50 transition-colors">
+                                            <div className="w-10 h-10 rounded-full bg-brand-purple/10 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all shadow-lg shadow-brand-purple/5">
                                                 <CheckCircle2 size={18} />
                                             </div>
-                                            <span className="text-sm font-bold uppercase tracking-wide text-secondary">{benefit}</span>
+                                            <span className="text-xs font-bold uppercase tracking-wider text-white/80 group-hover:text-white transition-colors">{benefit}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -180,17 +177,19 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="bg-white p-12 md:p-16 rounded-[4rem] premium-shadow border border-primary/5"
+                                className="glass-card p-12 md:p-16 rounded-[4rem] border border-white/5 relative overflow-hidden"
                             >
-                                <h2 className="text-3xl font-display uppercase text-secondary mb-8 font-bold">
+                                <div className="absolute top-0 left-0 w-64 h-64 bg-brand-purple/5 blur-[100px] rounded-full pointer-events-none" />
+
+                                <h2 className="text-3xl font-display uppercase text-white mb-8 font-black tracking-tight relative z-10">
                                     {service.offerTitle}
                                 </h2>
-                                <p className="text-secondary/60 text-lg leading-relaxed mb-10">
+                                <p className="text-muted text-lg leading-relaxed mb-12 relative z-10">
                                     {service.offerContent}
                                 </p>
-                                <div className="flex flex-wrap gap-8">
+                                <div className="flex flex-wrap gap-12 relative z-10">
                                     {service.stats?.map((stat, idx) => (
-                                        <div key={idx} className="flex items-center gap-6">
+                                        <div key={idx} className="flex items-center gap-6 group">
                                             <div className="relative w-20 h-20 flex items-center justify-center">
                                                 <svg className="w-full h-full -rotate-90">
                                                     <circle
@@ -200,9 +199,9 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                                                         stroke="currentColor"
                                                         strokeWidth="4"
                                                         fill="transparent"
-                                                        className="text-primary/10"
+                                                        className="text-white/5"
                                                     />
-                                                    <circle
+                                                    <motion.circle
                                                         cx="40"
                                                         cy="40"
                                                         r="36"
@@ -210,13 +209,16 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                                                         strokeWidth="4"
                                                         fill="transparent"
                                                         strokeDasharray={2 * Math.PI * 36}
-                                                        strokeDashoffset={2 * Math.PI * 36 * (1 - stat.value / 100)}
-                                                        className="text-primary"
+                                                        initial={{ strokeDashoffset: 2 * Math.PI * 36 }}
+                                                        whileInView={{ strokeDashoffset: 2 * Math.PI * 36 * (1 - stat.value / 100) }}
+                                                        viewport={{ once: true }}
+                                                        transition={{ duration: 1.5, delay: 0.3 }}
+                                                        className="text-brand-purple"
                                                     />
                                                 </svg>
-                                                <span className="absolute text-lg font-bold text-secondary">{stat.value}%</span>
+                                                <span className="absolute text-lg font-bold text-white">{stat.value}%</span>
                                             </div>
-                                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-secondary/80 max-w-[100px]">
+                                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 group-hover:text-brand-purple transition-colors max-w-[100px]">
                                                 {stat.label}
                                             </span>
                                         </div>

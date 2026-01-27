@@ -26,24 +26,22 @@ export default function Portfolio() {
         : ITEMS.filter(item => item.category === activeCategory);
 
     return (
-        <section id="portfolio" className="py-16 md:py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden">
+        <section id="portfolio" className="py-16 md:py-24 bg-brand-black relative overflow-hidden">
             {/* Background decoration */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#6a0eac] rounded-full blur-3xl" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#3a0b9f] rounded-full blur-3xl" />
-            </div>
+            <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-brand-purple/10 blur-[100px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-brand-deep/10 blur-[100px] rounded-full pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Header Section */}
-                <motion.div 
+                <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    <motion.span 
-                        className="inline-block text-primary font-semibold uppercase tracking-[0.3em] text-sm mb-6"
+                    <motion.span
+                        className="inline-block text-brand-purple font-semibold uppercase tracking-[0.3em] text-sm mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -51,8 +49,8 @@ export default function Portfolio() {
                     >
                         Our Creative Portfolio
                     </motion.span>
-                    <motion.h2 
-                        className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+                    <motion.h2
+                        className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gradient"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -63,7 +61,7 @@ export default function Portfolio() {
                 </motion.div>
 
                 {/* Filter Buttons */}
-                <motion.div 
+                <motion.div
                     className="flex flex-wrap justify-center gap-4 mb-12"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -81,11 +79,11 @@ export default function Portfolio() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className={`
-                                relative px-6 py-3 rounded-full text-sm font-semibold uppercase tracking-wider
+                                relative px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest
                                 transition-all duration-300 overflow-hidden
                                 ${activeCategory === category
-                                    ? "bg-primary text-white shadow-lg shadow-primary/30"
-                                    : "bg-white/10 text-gray-300 hover:text-white hover:bg-white/20 backdrop-blur-sm border border-white/10"
+                                    ? "bg-brand-purple text-white shadow-lg shadow-brand-purple/30"
+                                    : "bg-white/5 text-muted hover:text-white hover:bg-white/10 backdrop-blur-sm border border-white/10"
                                 }
                             `}
                         >
@@ -93,7 +91,7 @@ export default function Portfolio() {
                             {activeCategory === category && (
                                 <motion.div
                                     layoutId="activeFilter"
-                                    className="absolute inset-0 bg-blue-600"
+                                    className="absolute inset-0 bg-brand-purple"
                                     style={{ borderRadius: "9999px" }}
                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 />
@@ -104,8 +102,8 @@ export default function Portfolio() {
                 </motion.div>
 
                 {/* Projects Grid */}
-                <motion.div 
-                    layout 
+                <motion.div
+                    layout
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                     <AnimatePresence mode="popLayout">
@@ -116,17 +114,16 @@ export default function Portfolio() {
                                 initial={{ opacity: 0, y: 40, scale: 0.9 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 exit={{ opacity: 0, y: -40, scale: 0.9 }}
-                                transition={{ 
-                                    duration: 0.6, 
+                                transition={{
+                                    duration: 0.6,
                                     delay: index * 0.1,
                                     ease: "easeOut"
                                 }}
                                 whileHover={{ y: -8 }}
                                 onHoverStart={() => setHoveredItem(item.id)}
                                 onHoverEnd={() => setHoveredItem(null)}
-                                className="group relative bg-gray-800 rounded-2xl overflow-hidden cursor-pointer"
+                                className="group relative glass-card rounded-2xl overflow-hidden cursor-pointer"
                                 style={{
-                                    boxShadow: "0 10px 40px rgba(0, 0, 0, 0.3)",
                                     transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                                 }}
                             >
@@ -138,12 +135,12 @@ export default function Portfolio() {
                                         fill
                                         className="object-cover transition-all duration-700 group-hover:scale-110"
                                     />
-                                    
+
                                     {/* Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                                    
+                                    <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+
                                     {/* Hover Content */}
-                                    <motion.div 
+                                    <motion.div
                                         className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100"
                                         initial={false}
                                         animate={hoveredItem === item.id ? { opacity: 1 } : { opacity: 0 }}
@@ -153,7 +150,7 @@ export default function Portfolio() {
                                             initial={{ scale: 0, rotate: -180 }}
                                             animate={hoveredItem === item.id ? { scale: 1, rotate: 0 } : { scale: 0, rotate: -180 }}
                                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                            className="bg-white/20 backdrop-blur-md rounded-full p-4 border border-white/30"
+                                            className="bg-brand-purple/30 backdrop-blur-md rounded-full p-4 border border-white/20"
                                         >
                                             <Eye className="w-6 h-6 text-white" />
                                         </motion.div>
@@ -161,8 +158,8 @@ export default function Portfolio() {
 
                                     {/* Category Badge */}
                                     <div className="absolute top-4 left-4">
-                                        <motion.span 
-                                            className="bg-primary/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold"
+                                        <motion.span
+                                            className="bg-brand-purple/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
                                             initial={{ opacity: 0, x: -20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
@@ -173,8 +170,8 @@ export default function Portfolio() {
 
                                     {/* Year Badge */}
                                     <div className="absolute top-4 right-4">
-                                        <motion.span 
-                                            className="bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold"
+                                        <motion.span
+                                            className="bg-brand-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-[10px] font-bold"
                                             initial={{ opacity: 0, x: 20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
@@ -185,7 +182,7 @@ export default function Portfolio() {
                                 </div>
 
                                 {/* Content */}
-                                <motion.div 
+                                <motion.div
                                     className="p-6"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
@@ -193,10 +190,10 @@ export default function Portfolio() {
                                 >
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <h3 className="text-white font-bold text-lg leading-tight mb-1">
+                                            <h3 className="text-white font-bold text-lg leading-tight mb-1 uppercase tracking-tight">
                                                 {item.title}
                                             </h3>
-                                            <p className="text-gray-400 text-sm">
+                                            <p className="text-muted text-xs uppercase tracking-widest">
                                                 {item.category}
                                             </p>
                                         </div>
@@ -205,14 +202,14 @@ export default function Portfolio() {
                                             transition={{ type: "spring", stiffness: 300 }}
                                             className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                         >
-                                            <ArrowUpRight className="w-5 h-5 text-blue-400" />
+                                            <ArrowUpRight className="w-5 h-5 text-brand-purple" />
                                         </motion.div>
                                     </div>
                                 </motion.div>
 
                                 {/* Animated Border */}
                                 <motion.div
-                                    className="absolute inset-0 border-2 border-primary/50 rounded-2xl opacity-0 group-hover:opacity-100"
+                                    className="absolute inset-0 border-2 border-brand-purple/30 rounded-2xl opacity-0 group-hover:opacity-100 pointer-events-none"
                                     initial={false}
                                     animate={hoveredItem === item.id ? { opacity: 1 } : { opacity: 0 }}
                                     transition={{ duration: 0.3 }}
@@ -223,7 +220,7 @@ export default function Portfolio() {
                 </motion.div>
 
                 {/* Load More Button */}
-                <motion.div 
+                <motion.div
                     className="text-center mt-16"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -234,7 +231,7 @@ export default function Portfolio() {
                         <motion.button
                             whileHover={{ scale: 1.05, y: -2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-gradient-to-r from-[#6a0eac] to-[#3a0b9f] text-white px-8 py-4 rounded-full font-semibold text-sm uppercase tracking-wider shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300"
+                            className="btn-primary"
                         >
                             View All Projects
                         </motion.button>

@@ -4,29 +4,29 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 const STATS_DATA = [
-    { 
-        value: 500, 
-        label: "Clientele", 
+    {
+        value: 500,
+        label: "Clientele",
         sublabel: "and Still Counting",
-        progress: 75 
+        progress: 75
     },
-    { 
-        value: 400, 
-        label: "Talented Employees", 
+    {
+        value: 400,
+        label: "Talented Employees",
         sublabel: "",
-        progress: 75 
+        progress: 75
     },
-    { 
-        value: 50, 
-        label: "Fleets", 
+    {
+        value: 50,
+        label: "Fleets",
         sublabel: "with Best in class Logistic Services",
-        progress: 50 
+        progress: 50
     },
-    { 
-        value: 7, 
-        label: "Locations", 
+    {
+        value: 7,
+        label: "Locations",
         sublabel: "served with Single Point Contact",
-        progress: 25 
+        progress: 25
     },
 ];
 
@@ -84,7 +84,7 @@ function StatCounter({ stat, index }: StatCounterProps) {
                         cy="50"
                         r={radius}
                         fill="none"
-                        stroke="rgba(255, 255, 255, 0.1)"
+                        stroke="rgba(255, 255, 255, 0.05)"
                         strokeWidth="4"
                     />
                     {/* Progress Arc */}
@@ -93,7 +93,7 @@ function StatCounter({ stat, index }: StatCounterProps) {
                         cy="50"
                         r={radius}
                         fill="none"
-                        stroke="#FF5722"
+                        stroke="var(--brand-purple)"
                         strokeWidth="4"
                         strokeLinecap="round"
                         initial={{ pathLength: 0 }}
@@ -128,11 +128,11 @@ function StatCounter({ stat, index }: StatCounterProps) {
 
 export default function Stats() {
     return (
-        <section className="py-16 md:py-20 bg-surface relative overflow-hidden">
+        <section className="py-16 md:py-20 bg-brand-black relative overflow-hidden">
             {/* Background Effects */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/50 rounded-full blur-3xl" />
+            <div className="absolute inset-0 z-0">
+                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-purple/10 rounded-full blur-[100px] pointer-events-none" />
+                <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-deep/10 rounded-full blur-[100px] pointer-events-none" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
@@ -149,7 +149,7 @@ export default function Stats() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, delay: 0.2 }}
-                        className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-white mb-6 leading-tight"
+                        className="text-3xl md:text-4xl lg:text-5xl font-display font-black mb-6 leading-tight text-gradient"
                     >
                         Investing in us adds to your bottom-line; we will help you grow your business
                     </motion.h2>
@@ -158,7 +158,7 @@ export default function Stats() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, delay: 0.3 }}
-                        className="text-white/80 text-sm md:text-base leading-relaxed"
+                        className="text-muted text-sm md:text-base leading-relaxed"
                     >
                         With over 500 clients, 6 workshops, and a team of 400 experienced and talented employees; we are a powerful and cohesive unit aiming to accelerate your growth and act as your advertising genie.
                     </motion.p>

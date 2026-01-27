@@ -21,7 +21,7 @@ export default function PortfolioPage() {
       <Navbar />
 
       {/* Hero Section - Matching Career Style */}
-      <section className="relative pt-24 pb-16 bg-black overflow-hidden">
+      <section className="relative pt-32 md:pt-40 pb-16 bg-black overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[#050505]" />
           <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#6a0eac] blur-[150px] opacity-10 rounded-full" />

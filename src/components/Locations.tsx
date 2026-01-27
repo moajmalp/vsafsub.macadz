@@ -5,8 +5,8 @@ import { Phone, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 const BRANCHES = [
-    { 
-        name: "RIYADH", 
+    {
+        name: "RIYADH",
         phone: "+966 549 900 322",
         email: "INFO@SAFPRINTERS.COM",
         address: [
@@ -17,8 +17,8 @@ const BRANCHES = [
         ],
         image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=400&fit=crop"
     },
-    { 
-        name: "JEDDAH", 
+    {
+        name: "JEDDAH",
         phone: "+966 549 900 322",
         email: "INFO@SAFPRINTERS.COM",
         address: [
@@ -29,8 +29,8 @@ const BRANCHES = [
         ],
         image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=400&fit=crop"
     },
-    { 
-        name: "KHOBAR", 
+    {
+        name: "KHOBAR",
         phone: "+966 549 900 322",
         email: "INFO@SAFPRINTERS.COM",
         address: [
@@ -45,24 +45,24 @@ const BRANCHES = [
 
 export default function Locations() {
     return (
-        <section id="locations" className="py-16 md:py-24 bg-surface relative overflow-hidden">
+        <section id="locations" className="py-16 md:py-24 bg-brand-black relative overflow-hidden">
             {/* Background decoration */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/50 rounded-full blur-3xl" />
+            <div className="absolute inset-0 z-0">
+                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-purple/10 rounded-full blur-[100px] pointer-events-none" />
+                <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-deep/10 rounded-full blur-[100px] pointer-events-none" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Header */}
-                <motion.div 
+                <motion.div
                     className="text-center mb-12 md:mb-16"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    <motion.span 
-                        className="inline-block text-primary font-bold uppercase tracking-[0.3em] text-[11px] mb-4"
+                    <motion.span
+                        className="inline-block text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px] mb-4"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -70,14 +70,14 @@ export default function Locations() {
                     >
                         Global Presence
                     </motion.span>
-                    <motion.h2 
-                        className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display uppercase font-black text-white leading-tight"
+                    <motion.h2
+                        className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display uppercase font-black leading-tight text-gradient"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
-                        OUR <span className="text-primary italic">BRANCHES</span>
+                        OUR <span className="italic">BRANCHES</span>
                     </motion.h2>
                 </motion.div>
 
@@ -89,8 +89,8 @@ export default function Locations() {
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ 
-                                duration: 0.6, 
+                            transition={{
+                                duration: 0.6,
                                 delay: index * 0.15,
                                 ease: [0.22, 1, 0.36, 1]
                             }}
@@ -104,12 +104,12 @@ export default function Locations() {
                                 transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
                                 className="relative w-32 h-32 md:w-40 md:h-40 z-20 mb-0"
                             >
-                                <div className="absolute inset-0 rounded-full border-[3px] border-white shadow-2xl overflow-hidden bg-white">
+                                <div className="absolute inset-0 rounded-full border-[3px] border-brand-purple shadow-2xl overflow-hidden bg-brand-black">
                                     <Image
                                         src={branch.image}
                                         alt={branch.name}
                                         fill
-                                        className="object-cover"
+                                        className="object-cover transition-transform duration-700 hover:scale-110"
                                         sizes="(max-width: 768px) 128px, 160px"
                                     />
                                 </div>
@@ -126,7 +126,7 @@ export default function Locations() {
                                     clipPath: "polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%)"
                                 }}
                             >
-                                <div className="w-full h-full bg-white shadow-lg" />
+                                <div className="w-full h-full bg-brand-purple shadow-lg" />
                             </motion.div>
 
                             {/* Card */}
@@ -135,7 +135,7 @@ export default function Locations() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.15 + 0.4 }}
-                                className="relative w-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-10 pt-12 md:pt-16 shadow-2xl border border-gray-700/50"
+                                className="relative w-full glass-card rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-10 pt-12 md:pt-16 shadow-2xl border border-white/5"
                             >
                                 {/* Location Name */}
                                 <motion.h3
@@ -157,7 +157,7 @@ export default function Locations() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.5, delay: index * 0.15 + 0.6 }}
-                                        className="block text-white text-sm md:text-base font-medium hover:text-primary transition-colors duration-300"
+                                        className="block text-white/80 text-sm md:text-base font-medium hover:text-brand-purple transition-colors duration-300"
                                     >
                                         {branch.email.toLowerCase()}
                                     </motion.a>
@@ -169,7 +169,7 @@ export default function Locations() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.5, delay: index * 0.15 + 0.7 }}
-                                        className="block text-white text-sm md:text-base font-medium hover:text-primary transition-colors duration-300"
+                                        className="block text-white/80 text-sm md:text-base font-medium hover:text-brand-purple transition-colors duration-300"
                                     >
                                         {branch.phone}
                                     </motion.a>
@@ -180,9 +180,9 @@ export default function Locations() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.5, delay: index * 0.15 + 0.8 }}
-                                        className="pt-4 md:pt-6 mt-4 md:mt-6 border-t border-gray-700/50"
+                                        className="pt-4 md:pt-6 mt-4 md:mt-6 border-t border-white/5"
                                     >
-                                        <div className="space-y-1 text-gray-400 text-xs md:text-sm font-medium leading-relaxed">
+                                        <div className="space-y-1 text-muted text-xs md:text-sm font-medium leading-relaxed">
                                             {branch.address.map((line, lineIndex) => (
                                                 <div key={lineIndex} className="text-center">
                                                     {line}
@@ -193,8 +193,8 @@ export default function Locations() {
                                 </div>
 
                                 {/* Decorative Elements */}
-                                <div className="absolute top-4 right-4 w-20 h-20 bg-primary/5 rounded-full blur-2xl" />
-                                <div className="absolute bottom-4 left-4 w-16 h-16 bg-primary/5 rounded-full blur-2xl" />
+                                <div className="absolute top-4 right-4 w-20 h-20 bg-brand-purple/5 rounded-full blur-2xl pointer-events-none" />
+                                <div className="absolute bottom-4 left-4 w-16 h-16 bg-brand-deep/5 rounded-full blur-2xl pointer-events-none" />
                             </motion.div>
                         </motion.div>
                     ))}

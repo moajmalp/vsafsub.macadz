@@ -6,7 +6,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin } from "luc
 
 export default function Footer() {
     return (
-        <footer className="bg-secondary text-white pt-16 md:pt-24 pb-12 font-sans">
+        <footer className="bg-brand-black text-white pt-16 md:pt-24 pb-12 font-sans border-t border-white/5">
             <div className="container mx-auto px-6">
                 {/* All sections in one row */}
                 <div className="mb-24">
@@ -21,12 +21,12 @@ export default function Footer() {
                                     className="object-contain"
                                 />
                             </Link>
-                            <p className="text-white/50 leading-relaxed mb-6 text-sm font-medium max-w-xs">
+                            <p className="text-muted leading-relaxed mb-6 text-sm font-medium max-w-xs">
                                 Engineering future-proof advertising solutions that elevate brands through creative excellence and strategic innovation.
                             </p>
                             <div className="flex gap-4">
                                 {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
-                                    <a key={idx} href="#" className="w-12 h-12 rounded-2xl border border-white/5 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300 text-white group">
+                                    <a key={idx} href="#" className="w-12 h-12 rounded-2xl border border-white/5 flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple transition-all duration-300 text-white group">
                                         <Icon size={18} className="group-hover:scale-110" />
                                     </a>
                                 ))}
@@ -35,21 +35,21 @@ export default function Footer() {
 
                         {/* Second Column: Discover */}
                         <div>
-                            <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-primary">Discover</h4>
-                            <ul className="space-y-5 text-sm font-medium text-white/50">
-                                <li><Link href="/about" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">About Our Agency</Link></li>
-                                <li><Link href="/services" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">Expert Services</Link></li>
-                                <li><Link href="/portfolio" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">Strategic Work</Link></li>
-                                <li><Link href="/career" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">Career</Link></li>
-                                <li><Link href="/blogs" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">Insights & News</Link></li>
-                                <li><Link href="/contact" className="hover:text-primary transition-colors hover:translate-x-1 inline-block duration-300">Start Project</Link></li>
+                            <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-white">Discover</h4>
+                            <ul className="space-y-5 text-sm font-medium text-muted">
+                                <li><Link href="/about" className="hover:text-brand-purple transition-colors hover:translate-x-1 inline-block duration-300">About Our Agency</Link></li>
+                                <li><Link href="/services" className="hover:text-brand-purple transition-colors hover:translate-x-1 inline-block duration-300">Expert Services</Link></li>
+                                <li><Link href="/portfolio" className="hover:text-brand-purple transition-colors hover:translate-x-1 inline-block duration-300">Strategic Work</Link></li>
+                                <li><Link href="/career" className="hover:text-brand-purple transition-colors hover:translate-x-1 inline-block duration-300">Career</Link></li>
+                                <li><Link href="/blogs" className="hover:text-brand-purple transition-colors hover:translate-x-1 inline-block duration-300">Insights & News</Link></li>
+                                <li><Link href="/contact" className="hover:text-brand-purple transition-colors hover:translate-x-1 inline-block duration-300">Start Project</Link></li>
                             </ul>
                         </div>
 
                         {/* Third Column: Capabilities */}
                         <div>
-                            <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-primary">Capabilities</h4>
-                            <ul className="space-y-5 text-sm font-medium text-white/50 text-left">
+                            <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-white">Capabilities</h4>
+                            <ul className="space-y-5 text-sm font-medium text-muted text-left">
                                 <li className="hover:text-white transition-colors cursor-pointer">Events & Booth Design</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Premium Retail Podiums</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Dynamic Vehicle Branding</li>
@@ -60,18 +60,18 @@ export default function Footer() {
 
                         {/* Fourth Column: Get In Touch */}
                         <div>
-                            <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-primary">Get In Touch</h4>
-                            <div className="space-y-8 text-sm font-medium text-white/50">
+                            <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-white">Get In Touch</h4>
+                            <div className="space-y-8 text-sm font-medium text-muted">
                                 <div className="flex gap-5">
-                                    <MapPin className="text-primary shrink-0" size={20} />
+                                    <MapPin className="text-brand-purple shrink-0" size={20} />
                                     <p className="leading-relaxed">8127 Abdullah Ibn Badr, Al-Sharafeyah, Jeddah 23218 Saudi Arabia</p>
                                 </div>
                                 <div className="flex items-center gap-5">
-                                    <Phone className="text-primary shrink-0" size={18} />
+                                    <Phone className="text-brand-purple shrink-0" size={18} />
                                     <p>+966 549 900 322</p>
                                 </div>
                                 <div className="flex items-center gap-5">
-                                    <Mail className="text-primary shrink-0" size={18} />
+                                    <Mail className="text-brand-purple shrink-0" size={18} />
                                     <p>info@safprinters.com</p>
                                 </div>
                             </div>
@@ -84,8 +84,8 @@ export default function Footer() {
                         © 2026 Vsaf Adz Agency. Engineered by Mac Adz
                     </p>
                     <div className="flex gap-10 text-xs font-bold uppercase tracking-widest text-white/20">
-                        <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-primary transition-colors">Terms of Use</a>
+                        <a href="#" className="hover:text-brand-purple transition-colors">Privacy Policy</a>
+                        <a href="#" className="hover:text-brand-purple transition-colors">Terms of Use</a>
                     </div>
                 </div>
             </div>

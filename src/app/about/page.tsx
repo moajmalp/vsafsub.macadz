@@ -6,30 +6,9 @@ import About from "@/components/About";
 import Stats from "@/components/Stats";
 import CommitmentSection from "@/components/CommitmentSection";
 import { motion } from "framer-motion";
-import { Target, Users, Award, ShieldCheck } from "lucide-react";
+import { Target, Users, Award } from "lucide-react";
 
-const VALUES = [
-    {
-        icon: <Target className="w-6 h-6" />,
-        title: "Our Mission",
-        description: "To empower brands through innovative creative solutions that drive real business growth."
-    },
-    {
-        icon: <Users className="w-6 h-6" />,
-        title: "Our Team",
-        description: "A diverse collective of visionary creators, strategic thinkers, and technical experts."
-    },
-    {
-        icon: <Award className="w-6 h-6" />,
-        title: "Our Quality",
-        description: "High-impact branding and fabrication delivered with uncompromising attention to detail."
-    },
-    {
-        icon: <ShieldCheck className="w-6 h-6" />,
-        title: "Our Promise",
-        description: "Building long-term partnerships based on transparency, reliability, and excellence."
-    }
-];
+
 
 export default function AboutPage() {
     return (
@@ -37,7 +16,7 @@ export default function AboutPage() {
             <Navbar />
 
             {/* Hero Section - Matching Career Style */}
-            <section className="relative pt-24 pb-16 bg-black overflow-hidden">
+            <section className="relative pt-32 md:pt-40 bg-black overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-[#050505]" />
                     <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#6a0eac] blur-[150px] opacity-10 rounded-full" />
@@ -45,7 +24,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+                    <div className="flex flex-col items-center text-center max-w-7xl mx-auto">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -77,33 +56,7 @@ export default function AboutPage() {
 
             <CommitmentSection />
 
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-6">
-                    <div className="flex flex-col items-center mb-16 text-center">
-                        <span className="text-primary font-bold uppercase tracking-[0.3em] text-[12px] mb-4">What Drives Us</span>
-                        <h2 className="text-4xl md:text-6xl font-display uppercase tracking-tight text-secondary font-bold">Our Core Values</h2>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {VALUES.map((value, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="p-10 rounded-[2.5rem] bg-secondary border border-transparent hover:border-primary/20 hover:premium-shadow transition-all group"
-                            >
-                                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-white mb-6 group-hover:bg-primary group-hover:text-white transition-all">
-                                    {value.icon}
-                                </div>
-                                <h3 className="text-2xl font-display uppercase text-white mb-4 font-bold">{value.title}</h3>
-                                <p className="text-white/90 text-sm leading-relaxed">{value.description}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             <Stats />
             <Footer />

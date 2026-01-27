@@ -7,14 +7,16 @@
   --font-display: var(--font-oswald);
 
   /* Purple Gradient Design System */
-  --color-primary: #6a0eac;
-  /* Darker Purple */
-  --color-primary-dark: #3a0b9f;
+  --color-brand-purple: #6A0EAC;
+  --color-brand-deep: #3A0B9F;
+  --color-brand-black: #050505;
+
+  --color-primary: var(--color-brand-purple);
+  --color-primary-dark: var(--color-brand-deep);
+  --color-surface: var(--color-brand-black);
   --color-secondary: #0F1728;
-  /* Sophisticated Purple Accent */
   --color-accent: #4a1a7f;
-  /* Dark Backdrop */
-  --color-surface: #050505;
+  --color-muted: #B0B0B0;
 
   --animate-marquee: marquee 15s linear infinite;
 
@@ -29,9 +31,12 @@
   }
 
   @keyframes shimmer {
-    0%, 100% {
+
+    0%,
+    100% {
       background-position: -200% 0;
     }
+
     50% {
       background-position: 200% 0;
     }
@@ -41,7 +46,7 @@
 @layer base {
   body {
     font-family: var(--font-inter);
-    @apply antialiased bg-black text-white;
+    @apply antialiased bg-brand-black text-white;
   }
 
   h1,
@@ -112,7 +117,20 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-brand-purple;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-b from-brand-purple to-brand-deep hover:opacity-90 transition-opacity text-white rounded-full px-8 py-3 font-semibold;
+    box-shadow: 0 0 15px rgba(106, 14, 172, 0.5);
+  }
+
+  .glass-card {
+    @apply border border-white/10 bg-brand-black/80 backdrop-blur-xl hover:border-brand-purple/50 transition-colors shadow-2xl;
+  }
+
+  .bg-glow-radial {
+    background: radial-gradient(ellipse at center, rgba(106, 14, 172, 0.15), #050505 70%);
   }
 
   .gradient-purple {
@@ -133,10 +151,6 @@
 
   .premium-shadow {
     box-shadow: 0 20px 40px -15px rgba(106, 14, 172, 0.2);
-  }
-
-  .glass-card {
-    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl;
   }
 
   .mask-radial {
