@@ -3,10 +3,19 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Send, Mail, Phone, FileText, MessageSquare, Sparkles, Zap, Target, Rocket } from "lucide-react";
+import { Send, Mail, Phone, FileText, MessageSquare, Sparkles, Zap, Target, Rocket, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const SERVICES = [
+    "Events & Booth Design",
+    "Premium Retail Podiums",
+    "Dynamic Vehicle Branding",
+    "3D Indoor Branding",
+    "Large Scale Signages",
+    "Branding & Identity",
+];
 
 const formSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
@@ -34,15 +43,34 @@ export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [focusedField, setFocusedField] = useState<string | null>(null);
+    const [isSelectOpen, setIsSelectOpen] = useState(false);
+    const selectRef = useRef<HTMLDivElement>(null);
 
     const {
         register,
         handleSubmit,
         reset,
+        setValue,
+        watch,
         formState: { errors },
     } = useForm<FormData>({
         resolver: zodResolver(formSchema),
+        defaultValues: {
+            subject: "",
+        }
     });
+
+    const selectedSubject = watch("subject");
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+                setIsSelectOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
 
     const onSubmit = async (data: FormData) => {
         setIsSubmitting(true);
@@ -249,7 +277,7 @@ export default function ContactForm() {
                                 </motion.div>
                             </div>
 
-                            {/* Subject Field */}
+                            {/* Subject (Service) Field */}
                             <motion.div
                                 custom={3}
                                 initial="hidden"
@@ -258,20 +286,60 @@ export default function ContactForm() {
                                 variants={fieldVariants}
                                 className="space-y-2"
                             >
-                                <div className="relative group">
+                                <div className="relative group" ref={selectRef}>
                                     <div className="absolute left-5 top-1/2 -translate-y-1/2 text-white/30 group-focus-within:text-brand-purple transition-colors duration-300 z-10">
                                         <FileText size={18} />
                                     </div>
-                                    <input
-                                        {...register("subject")}
-                                        placeholder="Project Subject"
-                                        onFocus={() => setFocusedField("subject")}
-                                        onBlur={() => setFocusedField(null)}
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsSelectOpen(!isSelectOpen)}
                                         className={cn(
-                                            "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-6 py-4 focus:border-brand-purple/50 focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/30 text-sm font-medium",
-                                            errors.subject && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                                            "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-12 py-4 outline-none transition-all duration-300 text-sm font-medium flex items-center justify-between group text-left",
+                                            isSelectOpen ? "border-brand-purple/50 ring-1 ring-brand-purple/20" : "hover:border-white/20",
+                                            errors.subject ? "border-red-500/50" : "",
+                                            selectedSubject ? "text-white" : "text-white/30"
                                         )}
-                                    />
+                                    >
+                                        <span>{selectedSubject || "Service Interested"}</span>
+                                        <ChevronDown
+                                            size={18}
+                                            className={cn(
+                                                "transition-transform duration-300 text-brand-purple absolute right-5",
+                                                isSelectOpen ? "rotate-180" : ""
+                                            )}
+                                        />
+                                    </button>
+
+                                    <AnimatePresence>
+                                        {isSelectOpen && (
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                transition={{ duration: 0.2 }}
+                                                className="absolute top-full left-0 right-0 mt-2 bg-brand-black/90 border border-white/10 rounded-2xl overflow-hidden z-20 shadow-2xl backdrop-blur-xl"
+                                            >
+                                                <div className="max-h-64 overflow-y-auto custom-scrollbar">
+                                                    {SERVICES.map((service) => (
+                                                        <button
+                                                            key={service}
+                                                            type="button"
+                                                            onClick={() => {
+                                                                setValue("subject", service, { shouldValidate: true });
+                                                                setIsSelectOpen(false);
+                                                            }}
+                                                            className={cn(
+                                                                "w-full px-6 py-4 text-left text-sm transition-colors hover:bg-brand-purple/10",
+                                                                selectedSubject === service ? "text-brand-purple bg-brand-purple/5 font-bold" : "text-white/70"
+                                                            )}
+                                                        >
+                                                            {service}
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                 </div>
                                 {errors.subject && (
                                     <motion.p

@@ -62,18 +62,29 @@ export default function Footer() {
                         <div>
                             <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-white">Get In Touch</h4>
                             <div className="space-y-8 text-sm font-medium text-muted">
-                                <div className="flex gap-5">
-                                    <MapPin className="text-brand-purple shrink-0" size={20} />
+                                <a
+                                    href="https://maps.google.com/?q=8127+Abdullah+Ibn+Badr,+Al-Sharafeyah,+Jeddah+23218+Saudi+Arabia"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex gap-5 group hover:text-white transition-colors duration-300"
+                                >
+                                    <MapPin className="text-brand-purple shrink-0 group-hover:scale-110 transition-transform" size={20} />
                                     <p className="leading-relaxed">8127 Abdullah Ibn Badr, Al-Sharafeyah, Jeddah 23218 Saudi Arabia</p>
-                                </div>
-                                <div className="flex items-center gap-5">
-                                    <Phone className="text-brand-purple shrink-0" size={18} />
+                                </a>
+                                <a
+                                    href="tel:+966549900322"
+                                    className="flex items-center gap-5 group hover:text-white transition-colors duration-300"
+                                >
+                                    <Phone className="text-brand-purple shrink-0 group-hover:scale-110 transition-transform" size={18} />
                                     <p>+966 549 900 322</p>
-                                </div>
-                                <div className="flex items-center gap-5">
-                                    <Mail className="text-brand-purple shrink-0" size={18} />
+                                </a>
+                                <a
+                                    href="mailto:info@safprinters.com"
+                                    className="flex items-center gap-5 group hover:text-white transition-colors duration-300"
+                                >
+                                    <Mail className="text-brand-purple shrink-0 group-hover:scale-110 transition-transform" size={18} />
                                     <p>info@safprinters.com</p>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>

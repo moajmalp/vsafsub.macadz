@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Mail, Phone, MapPin, MessageCircle, Send } from "lucide-react";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { Mail, Phone, MapPin, MessageCircle, Send, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const formSchema = z.object({
@@ -59,15 +59,34 @@ const SERVICES = [
 export default function ContactPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [isSelectOpen, setIsSelectOpen] = useState(false);
+    const selectRef = useRef<HTMLDivElement>(null);
 
     const {
         register,
         handleSubmit,
         reset,
+        setValue,
+        watch,
         formState: { errors },
     } = useForm<FormData>({
         resolver: zodResolver(formSchema),
+        defaultValues: {
+            course: "",
+        }
     });
+
+    const selectedCourse = watch("course");
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+                setIsSelectOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
 
     const onSubmit = async (data: FormData) => {
         setIsSubmitting(true);
@@ -250,24 +269,57 @@ export default function ContactPage() {
                                         )}
                                     </div>
                                     <div className="space-y-2">
-                                        <div className="relative">
-                                            <select
-                                                {...register("course")}
+                                        <div className="relative" ref={selectRef}>
+                                            <button
+                                                type="button"
+                                                onClick={() => setIsSelectOpen(!isSelectOpen)}
                                                 className={cn(
-                                                    "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white/50 text-sm font-medium appearance-none",
-                                                    errors.course && "border-red-500/50 focus:border-red-500"
+                                                    "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none transition-all duration-300 text-sm font-medium flex items-center justify-between group",
+                                                    isSelectOpen ? "border-brand-purple/50 ring-1 ring-brand-purple/20" : "hover:border-white/20",
+                                                    errors.course ? "border-red-500/50" : "",
+                                                    selectedCourse ? "text-white" : "text-white/20"
                                                 )}
                                             >
-                                                <option value="" className="bg-brand-black">Service Interested</option>
-                                                {SERVICES.map((service) => (
-                                                    <option key={service} value={service} className="bg-brand-black text-white">
-                                                        {service}
-                                                    </option>
-                                                ))}
-                                            </select>
-                                            <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none">
-                                                <div className="w-2 h-2 border-r-2 border-b-2 border-white/20 rotate-45" />
-                                            </div>
+                                                <span>{selectedCourse || "Service Interested"}</span>
+                                                <ChevronDown
+                                                    size={18}
+                                                    className={cn(
+                                                        "transition-transform duration-300 text-brand-purple",
+                                                        isSelectOpen ? "rotate-180" : ""
+                                                    )}
+                                                />
+                                            </button>
+
+                                            <AnimatePresence>
+                                                {isSelectOpen && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                        transition={{ duration: 0.2 }}
+                                                        className="absolute top-full left-0 right-0 mt-2 bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden z-50 shadow-2xl backdrop-blur-xl"
+                                                    >
+                                                        <div className="max-h-64 overflow-y-auto custom-scrollbar">
+                                                            {SERVICES.map((service) => (
+                                                                <button
+                                                                    key={service}
+                                                                    type="button"
+                                                                    onClick={() => {
+                                                                        setValue("course", service, { shouldValidate: true });
+                                                                        setIsSelectOpen(false);
+                                                                    }}
+                                                                    className={cn(
+                                                                        "w-full px-6 py-4 text-left text-sm transition-colors hover:bg-brand-purple/10",
+                                                                        selectedCourse === service ? "text-brand-purple bg-brand-purple/5 font-bold" : "text-white/70"
+                                                                    )}
+                                                                >
+                                                                    {service}
+                                                                </button>
+                                                            ))}
+                                                        </div>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
                                         </div>
                                         {errors.course && (
                                             <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.course.message}</p>
