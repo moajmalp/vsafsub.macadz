@@ -40,7 +40,7 @@ export default function BlogsPage() {
                         >
                             <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Our Journal</span>
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase text-white mb-6 leading-[1.1] font-black">
-                                INSIGHTS & <span className="text-gradient italic">INNOVATION</span>
+                                INSIGHTS & <span className="text-gradient italic pe-2">INNOVATION</span>
                             </h1>
                             <p className="text-muted text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                                 Stay updated with the latest trends in branding, advertising, and creative design through our curated articles and industry insights.

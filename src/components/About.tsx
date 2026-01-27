@@ -450,7 +450,7 @@ export default function About() {
                     >
                         <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px] mb-4 block">Foundational Principles</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight">
-                            OUR <span className="text-gradient italic">CORE VALUES</span>
+                            OUR <span className="text-gradient italic pe-2">CORE VALUES</span>
                         </h2>
                     </motion.div>
 

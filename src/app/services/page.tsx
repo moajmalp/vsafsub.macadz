@@ -39,7 +39,7 @@ export default function ServicesPage() {
                             <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Our Expertise</span>
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase text-white mb-6 leading-[1.1] font-black">
                                 SOLUTIONS THAT <br className="hidden md:block" />
-                                <span className="text-gradient italic">INSPIRE</span>
+                                <span className="text-gradient italic pe-4">INSPIRE</span>
                             </h1>
                             <p className="text-muted text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                                 From large format printing to comprehensive branding strategies, we provide the tools and expertise to make your brand stand out in a crowded market.

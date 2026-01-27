@@ -76,7 +76,7 @@ export default function BlogPreview() {
                                 transition={{ duration: 0.6, delay: 0.3 }}
                                 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display uppercase font-bold leading-[1.05] text-gradient"
                             >
-                                Latest <span className="italic">News</span>
+                                Latest <span className="italic pe-2">News</span>
                             </motion.h4>
                         </div>
                         <motion.div

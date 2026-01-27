@@ -126,7 +126,7 @@ export default function ContactForm() {
                         className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display uppercase font-black leading-[1.05] tracking-tight text-gradient"
                     >
                         Send Us A{" "}
-                        <span className="italic">Message</span>
+                        <span className="italic pe-2">Message</span>
                     </motion.h4>
                 </motion.div>
 
@@ -165,7 +165,7 @@ export default function ContactForm() {
                                 className="text-2xl md:text-3xl lg:text-4xl font-display uppercase font-black text-white leading-[1.1]"
                             >
                                 Let's Start a{" "}
-                                <span className="text-brand-purple italic">New Project</span>
+                                <span className="text-brand-purple italic pe-2">New Project</span>
                             </motion.h3>
                         </motion.div>
 
@@ -479,7 +479,7 @@ export default function ContactForm() {
                                             className="text-2xl md:text-3xl lg:text-4xl font-display uppercase font-black text-white leading-[1.1] mb-6"
                                         >
                                             Let's Build Something{" "}
-                                            <span className="italic text-brand-purple">Extraordinary</span>
+                                            <span className="italic text-brand-purple pe-2">Extraordinary</span>
                                         </motion.h3>
                                         <motion.p
                                             initial={{ opacity: 0 }}

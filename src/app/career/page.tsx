@@ -78,7 +78,7 @@ export default function CareerPage() {
                             <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Join Our Creative Powerhouse</span>
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase text-white mb-6 leading-[1.1] font-black">
                                 BUILD YOUR <br className="hidden md:block" />
-                                <span className="text-gradient italic">FUTURE</span> WITH US
+                                <span className="text-gradient italic pe-2">FUTURE</span> WITH US
                             </h1>
                             <p className="text-muted text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                                 We're always looking for visionary creators, strategic thinkers, and technical experts to help us push the boundaries of modern advertising and branding.
