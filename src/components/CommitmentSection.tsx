@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
 const STATS = [
-    { number: "10000+", label: "Projects" },
-    { number: "5000+", label: "Clients" },
+    { number: "10k+", label: "Projects" },
+    { number: "5k+", label: "Clients" },
     { number: "8+", label: "Countries" },
 ];
 
@@ -28,28 +28,28 @@ export default function CommitmentSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ duration: 0.8 }}
-                        className="relative grid grid-cols-2 gap-0 glass-card rounded-2xl overflow-hidden"
+                        className="relative grid grid-cols-2 grid-rows-2 gap-0 glass-card rounded-3xl overflow-hidden border border-white/10"
                     >
                         {/* Vertical Divider */}
-                        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/5" />
+                        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/10" />
 
-                        {/* Horizontal Divider */}
-                        <div className="absolute top-1/2 left-0 right-0 h-px bg-white/5" />
+                        {/* Horizontal Divider - Only on the right side */}
+                        <div className="absolute top-1/2 left-1/2 right-0 h-px bg-white/10" />
 
-                        {/* Projects - Full Width */}
+                        {/* Projects - Left Side, Full Height */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="col-span-2 flex flex-col items-center justify-center p-8 md:p-10"
+                            className="row-span-2 flex flex-col items-center justify-center p-8 md:p-12 border-white/5"
                         >
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.3 }}
-                                className="text-5xl md:text-6xl lg:text-7xl font-display font-black text-brand-purple mb-2"
+                                className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-black text-brand-purple mb-3 leading-none text-center"
                             >
                                 {STATS[0].number}
                             </motion.div>
@@ -58,13 +58,13 @@ export default function CommitmentSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.4 }}
-                                className="text-white text-sm md:text-base font-bold uppercase tracking-wider"
+                                className="text-white text-base md:text-lg font-bold uppercase tracking-widest text-center"
                             >
                                 {STATS[0].label}
                             </motion.div>
                         </motion.div>
 
-                        {/* Clients */}
+                        {/* Clients - Right Top */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -77,7 +77,7 @@ export default function CommitmentSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.4 }}
-                                className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-brand-purple mb-2"
+                                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-black text-brand-purple mb-2 leading-none text-center"
                             >
                                 {STATS[1].number}
                             </motion.div>
@@ -92,7 +92,7 @@ export default function CommitmentSection() {
                             </motion.div>
                         </motion.div>
 
-                        {/* Countries */}
+                        {/* Countries - Right Bottom */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -105,7 +105,7 @@ export default function CommitmentSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.5 }}
-                                className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-brand-purple mb-2"
+                                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-black text-brand-purple mb-2 leading-none text-center"
                             >
                                 {STATS[2].number}
                             </motion.div>
