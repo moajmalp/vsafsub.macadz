@@ -400,9 +400,9 @@ export default function ContactForm() {
                                 <motion.button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    whileHover={{ scale: 1.01 }}
-                                    whileTap={{ scale: 0.99 }}
-                                    className="btn-primary w-full py-5 md:py-6 text-[12px] md:text-[13px] group"
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    className="w-full btn-primary py-5 rounded-2xl text-[12px] flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed uppercase"
                                 >
                                     {isSubmitting ? (
                                         <>
@@ -416,7 +416,7 @@ export default function ContactForm() {
                                     ) : (
                                         <>
                                             Submit Inquiry
-                                            <Send size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+                                            <Send size={18} />
                                         </>
                                     )}
                                 </motion.button>
