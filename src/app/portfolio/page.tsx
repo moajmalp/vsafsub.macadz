@@ -44,7 +44,7 @@ export default function PortfolioPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="text-primary font-bold uppercase tracking-[0.3em] text-[9px] mb-2 block">Showcasing Excellence</span>
+              <span className="text-primary uppercase tracking-[0.3em] text-[9px] mb-2 block">Showcasing Excellence</span>
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-display uppercase text-white mb-4 leading-[1.1] font-bold">
                 Our <span className="text-primary italic">Creative</span> Portfolio
               </h1>
@@ -65,7 +65,7 @@ export default function PortfolioPage() {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-8 py-3 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 border shadow-sm",
+                "px-8 py-3 rounded-full text-xs uppercase tracking-[0.2em] transition-all duration-300 border shadow-sm",
                 activeCategory === category
                   ? "bg-primary border-primary text-white shadow-primary/20"
                   : "bg-white border-secondary/10 text-secondary/60 hover:border-primary/50 hover:text-primary"
@@ -106,10 +106,10 @@ export default function PortfolioPage() {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
-                  <span className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+                  <span className="text-primary text-[10px] uppercase tracking-[0.3em] mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
                     {project.category}
                   </span>
-                  <h3 className="text-white text-2xl font-display uppercase font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                  <h3 className="text-white text-2xl font-display uppercase transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
                     {project.title}
                   </h3>
                   <p className="text-white/60 text-sm mt-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-150 line-clamp-2">

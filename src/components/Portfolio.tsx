@@ -41,7 +41,7 @@ export default function Portfolio() {
                     transition={{ duration: 0.8 }}
                 >
                     <motion.span
-                        className="inline-block text-brand-purple font-semibold uppercase tracking-[0.3em] text-sm mb-6"
+                        className="inline-block text-brand-purple uppercase tracking-[0.3em] text-sm mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -79,7 +79,7 @@ export default function Portfolio() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className={`
-                                relative px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest
+                                relative px-6 py-3 rounded-full text-xs uppercase tracking-widest
                                 transition-all duration-300 overflow-hidden
                                 ${activeCategory === category
                                     ? "bg-brand-purple text-white shadow-lg shadow-brand-purple/30"
@@ -159,7 +159,7 @@ export default function Portfolio() {
                                     {/* Category Badge */}
                                     <div className="absolute top-4 left-4">
                                         <motion.span
-                                            className="bg-brand-purple/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
+                                            className="bg-brand-purple/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-[10px] uppercase tracking-wider"
                                             initial={{ opacity: 0, x: -20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
@@ -171,7 +171,7 @@ export default function Portfolio() {
                                     {/* Year Badge */}
                                     <div className="absolute top-4 right-4">
                                         <motion.span
-                                            className="bg-brand-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-[10px] font-bold"
+                                            className="bg-brand-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-[10px]"
                                             initial={{ opacity: 0, x: 20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
@@ -190,7 +190,7 @@ export default function Portfolio() {
                                 >
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <h3 className="text-white font-bold text-lg leading-tight mb-1 uppercase tracking-tight">
+                                            <h3 className="text-white text-lg leading-tight mb-1 uppercase tracking-tight">
                                                 {item.title}
                                             </h3>
                                             <p className="text-muted text-xs uppercase tracking-widest">

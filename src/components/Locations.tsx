@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 const BRANCHES = [
     {
         name: "RIYADH",
-        phone: "+966 549 900 322",
+        phone: "+966 54 358 1898",
         email: "INFO@SAFPRINTERS.COM",
         address: [
-            "7383, Unit No.153,",
+            "Al Mashael, Exit 18,",
             "Riyadh",
-            "34627-2761,",
+            "+966 54 358 1898,",
             "Kingdom of Saudi Arabia"
         ],
         image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=400&fit=crop"
@@ -30,13 +30,13 @@ const BRANCHES = [
         image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=400&fit=crop"
     },
     {
-        name: "KHOBAR",
-        phone: "+966 549 900 322",
+        name: "Dammam",
+        phone: "+966 56 897 8004",
         email: "INFO@SAFPRINTERS.COM",
         address: [
-            "7383, Unit No.153,",
-            "Al Khobar",
-            "34627-2761,",
+            "Bilal Ibn Rabah street,",
+            "Dammam",
+            "+966 56 897 8004,",
             "Kingdom of Saudi Arabia"
         ],
         image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=400&fit=crop"
@@ -62,7 +62,7 @@ export default function Locations() {
                     transition={{ duration: 0.8 }}
                 >
                     <motion.span
-                        className="inline-block text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px] mb-4"
+                        className="inline-block text-brand-purple uppercase tracking-[0.3em] text-[11px] mb-4"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -157,7 +157,7 @@ export default function Locations() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.5, delay: index * 0.15 + 0.6 }}
-                                        className="block text-white/80 text-sm md:text-base font-medium hover:text-brand-purple transition-colors duration-300"
+                                        className="block text-white/80 text-sm md:text-base hover:text-brand-purple transition-colors duration-300"
                                     >
                                         {branch.email.toLowerCase()}
                                     </motion.a>
@@ -169,7 +169,7 @@ export default function Locations() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.5, delay: index * 0.15 + 0.7 }}
-                                        className="block text-white/80 text-sm md:text-base font-medium hover:text-brand-purple transition-colors duration-300"
+                                        className="block text-white/80 text-sm md:text-base hover:text-brand-purple transition-colors duration-300"
                                     >
                                         {branch.phone}
                                     </motion.a>
@@ -182,7 +182,7 @@ export default function Locations() {
                                         transition={{ duration: 0.5, delay: index * 0.15 + 0.8 }}
                                         className="pt-4 md:pt-6 mt-4 md:mt-6 border-t border-white/5"
                                     >
-                                        <div className="space-y-1 text-muted text-xs md:text-sm font-medium leading-relaxed">
+                                        <div className="space-y-1 text-muted text-xs md:text-sm leading-relaxed">
                                             {branch.address.map((line, lineIndex) => (
                                                 <div key={lineIndex} className="text-center">
                                                     {line}

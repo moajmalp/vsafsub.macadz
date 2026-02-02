@@ -82,7 +82,7 @@ export default function PillNavCSS({
                   style={{
                     color: isActive ? activeTextColor : textColor,
                   }}
-                  className="relative px-6 py-2 text-sm font-bold uppercase tracking-wider transition-all duration-300 rounded-full z-20 flex items-center justify-center whitespace-nowrap"
+                  className="relative px-6 py-2 text-sm uppercase tracking-wider transition-all duration-300 rounded-full z-20 flex items-center justify-center whitespace-nowrap"
                 >
                   {item.label}
                   {isActive && !hoveredItemData && (

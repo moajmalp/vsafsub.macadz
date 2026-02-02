@@ -133,7 +133,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block"
+                            className="text-brand-purple uppercase tracking-[0.3em] text-[10px] mb-4 block"
                         >
                             Get In Touch
                         </motion.span>
@@ -194,10 +194,10 @@ export default function ContactPage() {
                                                 <Icon className="w-6 h-6 text-brand-purple group-hover:text-white transition-colors duration-500" />
                                             </div>
                                             <div className="flex-1 pt-1">
-                                                <h3 className="font-bold text-white mb-2 text-sm uppercase tracking-widest text-brand-purple/80">
+                                                <h3 className="text-white mb-2 text-sm uppercase tracking-widest text-brand-purple/80">
                                                     {info.label}
                                                 </h3>
-                                                <p className="text-muted text-sm md:text-base leading-relaxed font-medium group-hover:text-white transition-colors">
+                                                <p className="text-muted text-sm md:text-base leading-relaxed group-hover:text-white transition-colors">
                                                     {info.details}
                                                 </p>
                                             </div>
@@ -229,12 +229,12 @@ export default function ContactPage() {
                                             {...register("name")}
                                             placeholder="Name"
                                             className={cn(
-                                                "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm font-medium",
+                                                "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm",
                                                 errors.name && "border-red-500/50 focus:border-red-500"
                                             )}
                                         />
                                         {errors.name && (
-                                            <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.name.message}</p>
+                                            <p className="text-red-500 text-[10px] ml-2 uppercase tracking-widest">{errors.name.message}</p>
                                         )}
                                     </div>
                                     <div className="space-y-2">
@@ -243,12 +243,12 @@ export default function ContactPage() {
                                             type="email"
                                             placeholder="Email"
                                             className={cn(
-                                                "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm font-medium",
+                                                "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm",
                                                 errors.email && "border-red-500/50 focus:border-red-500"
                                             )}
                                         />
                                         {errors.email && (
-                                            <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.email.message}</p>
+                                            <p className="text-red-500 text-[10px] ml-2 uppercase tracking-widest">{errors.email.message}</p>
                                         )}
                                     </div>
                                 </div>
@@ -260,12 +260,12 @@ export default function ContactPage() {
                                             type="tel"
                                             placeholder="Phone"
                                             className={cn(
-                                                "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm font-medium",
+                                                "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm",
                                                 errors.phone && "border-red-500/50 focus:border-red-500"
                                             )}
                                         />
                                         {errors.phone && (
-                                            <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.phone.message}</p>
+                                            <p className="text-red-500 text-[10px] ml-2 uppercase tracking-widest">{errors.phone.message}</p>
                                         )}
                                     </div>
                                     <div className="space-y-2">
@@ -274,7 +274,7 @@ export default function ContactPage() {
                                                 type="button"
                                                 onClick={() => setIsSelectOpen(!isSelectOpen)}
                                                 className={cn(
-                                                    "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none transition-all duration-300 text-sm font-medium flex items-center justify-between group",
+                                                    "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none transition-all duration-300 text-sm flex items-center justify-between group",
                                                     isSelectOpen ? "border-brand-purple/50 ring-1 ring-brand-purple/20" : "hover:border-white/20",
                                                     errors.course ? "border-red-500/50" : "",
                                                     selectedCourse ? "text-white" : "text-white/20"
@@ -322,7 +322,7 @@ export default function ContactPage() {
                                             </AnimatePresence>
                                         </div>
                                         {errors.course && (
-                                            <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.course.message}</p>
+                                            <p className="text-red-500 text-[10px] ml-2 uppercase tracking-widest">{errors.course.message}</p>
                                         )}
                                     </div>
                                 </div>
@@ -333,12 +333,12 @@ export default function ContactPage() {
                                         rows={5}
                                         placeholder="Message"
                                         className={cn(
-                                            "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm font-medium resize-none",
+                                            "w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-purple/50 focus:ring-1 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/20 text-sm resize-none",
                                             errors.message && "border-red-500/50 focus:border-red-500"
                                         )}
                                     />
                                     {errors.message && (
-                                        <p className="text-red-500 text-[10px] ml-2 font-bold uppercase tracking-widest">{errors.message.message}</p>
+                                        <p className="text-red-500 text-[10px] ml-2 uppercase tracking-widest">{errors.message.message}</p>
                                     )}
                                 </div>
 
@@ -370,7 +370,7 @@ export default function ContactPage() {
                                     <motion.div
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        className="p-4 bg-green-500/10 border border-green-500/30 text-green-400 text-center rounded-2xl text-[10px] font-bold uppercase tracking-widest"
+                                        className="p-4 bg-green-500/10 border border-green-500/30 text-green-400 text-center rounded-2xl text-[10px] uppercase tracking-widest"
                                     >
                                         ✓ Success! We'll reach out shortly.
                                     </motion.div>
@@ -404,7 +404,7 @@ export default function ContactPage() {
                             {/* Overlay for premium feel */}
                             <div className="absolute inset-0 pointer-events-none border-[12px] border-brand-black/10 rounded-[2.5rem]" />
                         </div>
-                        <p className="text-muted text-[10px] mt-6 text-center font-bold uppercase tracking-[0.3em]">
+                        <p className="text-muted text-[10px] mt-6 text-center uppercase tracking-[0.3em]">
                             Our Headquarters: 8127 Abdullah Ibn Badr, Jeddah, KSA
                         </p>
                     </motion.div>

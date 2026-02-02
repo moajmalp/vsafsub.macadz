@@ -38,7 +38,7 @@ export default function BlogsPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Our Journal</span>
+                            <span className="text-brand-purple uppercase tracking-[0.3em] text-[10px] mb-4 block">Our Journal</span>
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase text-white mb-6 leading-[1.1] font-black">
                                 INSIGHTS & <span className="text-gradient italic pe-2">INNOVATION</span>
                             </h1>
@@ -79,15 +79,15 @@ export default function BlogsPage() {
                                                 priority={idx === 0}
                                                 quality={85}
                                             />
-                                            <div className="absolute top-8 left-8 glass-card border-white/20 backdrop-blur-md text-white px-6 py-2 text-[9px] font-black uppercase tracking-[0.2em] rounded-full">
+                                            <div className="absolute top-8 left-8 glass-card border-white/20 backdrop-blur-md text-white px-6 py-2 text-[9px] uppercase tracking-[0.2em] rounded-full">
                                                 {post.date}
                                             </div>
-                                            <div className="absolute top-8 right-8 bg-brand-purple text-white px-6 py-2 text-[9px] font-black uppercase tracking-[0.2em] rounded-full shadow-lg shadow-brand-purple/20">
+                                            <div className="absolute top-8 right-8 bg-brand-purple text-white px-6 py-2 text-[9px] uppercase tracking-[0.2em] rounded-full shadow-lg shadow-brand-purple/20">
                                                 {post.category}
                                             </div>
                                         </div>
 
-                                        <div className="flex items-center gap-6 mb-4 text-[10px] font-black uppercase tracking-widest text-brand-purple">
+                                        <div className="flex items-center gap-6 mb-4 text-[10px] uppercase tracking-widest text-brand-purple">
                                             <div className="flex items-center gap-2">
                                                 <User size={14} />
                                                 <span>By {post.author}</span>
@@ -106,7 +106,7 @@ export default function BlogsPage() {
                                             {post.excerpt}
                                         </p>
 
-                                        <div className="flex items-center gap-4 text-white font-black text-xs uppercase tracking-[0.2em] group/btn group-hover:text-brand-purple transition-colors">
+                                        <div className="flex items-center gap-4 text-white text-xs uppercase tracking-[0.2em] group/btn group-hover:text-brand-purple transition-colors">
                                             Read Full Story
                                             <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center transition-all group-hover/btn:bg-brand-purple group-hover/btn:text-white group-hover/btn:border-brand-purple">
                                                 <ArrowRight size={16} />
@@ -144,7 +144,7 @@ export default function BlogsPage() {
                                     <input
                                         type="email"
                                         placeholder="Enter your email"
-                                        className="w-full bg-white/5 border border-white/10 rounded-full py-5 px-8 outline-none text-white focus:border-brand-purple/50 transition-all font-medium backdrop-blur-md"
+                                        className="w-full bg-white/5 border border-white/10 rounded-full py-5 px-8 outline-none text-white focus:border-brand-purple/50 transition-all backdrop-blur-md"
                                     />
                                     <button className="absolute right-2 top-2 bottom-2 btn-primary px-8 rounded-full text-[10px]">
                                         Subscribe

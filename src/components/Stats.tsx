@@ -113,7 +113,7 @@ function StatCounter({ stat, index }: StatCounterProps) {
 
             {/* Label */}
             <div className="text-center">
-                <p className="text-white text-sm md:text-base font-bold mb-1">
+                <p className="text-white text-sm md:text-base mb-1">
                     {stat.label}
                 </p>
                 {stat.sublabel && (

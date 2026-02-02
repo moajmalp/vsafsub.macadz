@@ -34,7 +34,7 @@ export default function Hero() {
                         transition={{ duration: 0.8 }}
                         className="mb-2"
                     >
-                        <span className="text-white font-bold tracking-[0.4em] uppercase text-[8px] bg-white/5 py-1 px-3 rounded-full backdrop-blur-sm border border-white/10">
+                        <span className="text-white tracking-[0.4em] uppercase text-[8px] bg-white/5 py-1 px-3 rounded-full backdrop-blur-sm border border-white/10">
                             Innovative Agency Solutions
                         </span>
                     </motion.div>
@@ -53,7 +53,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
-                        className="text-muted text-xs md:text-sm font-medium tracking-wide mb-6 max-w-lg leading-relaxed"
+                        className="text-muted text-xs md:text-sm tracking-wide mb-6 max-w-lg leading-relaxed"
                     >
                         Strategic branding and creative solutions engineered for your exponential business growth in the modern world.
                     </motion.p>
@@ -73,7 +73,7 @@ export default function Hero() {
                         </a>
                         <a
                             href="/portfolio"
-                            className="inline-block border border-white/10 hover:border-brand-purple/50 bg-white/5 hover:bg-brand-purple/10 text-white px-8 py-3.5 text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300 rounded-full backdrop-blur-md"
+                            className="inline-block border border-white/10 hover:border-brand-purple/50 bg-white/5 hover:bg-brand-purple/10 text-white px-8 py-3.5 text-[10px] uppercase tracking-[0.2em] transition-all duration-300 rounded-full backdrop-blur-md"
                         >
                             View Portfolio
                         </a>
@@ -87,7 +87,7 @@ export default function Hero() {
 
             {/* Scroll Indicator */}
             <div className="absolute bottom-12 right-12 hidden md:flex flex-col items-center gap-6 z-10">
-                <span className="text-white/40 uppercase text-[10px] font-bold tracking-[0.6em] rotate-90 mb-16">Explore</span>
+                <span className="text-white/40 uppercase text-[10px] tracking-[0.6em] rotate-90 mb-16">Explore</span>
                 <div className="w-[1px] h-24 bg-gradient-to-t from-brand-purple to-transparent" />
             </div>
         </section>

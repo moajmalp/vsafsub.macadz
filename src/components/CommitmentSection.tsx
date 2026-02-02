@@ -58,7 +58,7 @@ export default function CommitmentSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.4 }}
-                                className="text-white text-base md:text-lg font-bold uppercase tracking-widest text-center"
+                                className="text-white text-base md:text-lg uppercase tracking-widest text-center"
                             >
                                 {STATS[0].label}
                             </motion.div>
@@ -86,7 +86,7 @@ export default function CommitmentSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.5 }}
-                                className="text-white text-xs md:text-sm font-bold uppercase tracking-wider text-center"
+                                className="text-white text-xs md:text-sm uppercase tracking-wider text-center"
                             >
                                 {STATS[1].label}
                             </motion.div>
@@ -114,7 +114,7 @@ export default function CommitmentSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.6 }}
-                                className="text-white text-xs md:text-sm font-bold uppercase tracking-wider text-center"
+                                className="text-white text-xs md:text-sm uppercase tracking-wider text-center"
                             >
                                 {STATS[2].label}
                             </motion.div>
@@ -147,7 +147,7 @@ export default function CommitmentSection() {
                                 transition={{ duration: 0.6, delay: 0.4 }}
                                 className="text-muted text-sm md:text-base leading-relaxed"
                             >
-                                VSAF ADZ established its strong presence across the GCC & Middle East region and flourished over time through the remarkable experiences we offer our clients, becoming a leading model for the industry.
+                                V SAF arabia advertising company established its strong presence across the GCC & Middle East region and flourished over time through the remarkable experiences we offer our clients, becoming a leading model for the industry.
                             </motion.p>
 
                             <motion.p
@@ -185,7 +185,7 @@ export default function CommitmentSection() {
                     >
                         <Image
                             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop"
-                            alt="VSAF ADZ Building"
+                            alt="V SAF arabia advertising company Building"
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-110"
                             sizes="(max-width: 768px) 100vw, 50vw"
@@ -218,7 +218,7 @@ export default function CommitmentSection() {
                     >
                         <Image
                             src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop"
-                            alt="VSAF ADZ Office"
+                            alt="V SAF arabia advertising company Office"
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-110"
                             sizes="(max-width: 768px) 100vw, 50vw"

@@ -52,7 +52,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Our Specialties</span>
+                            <span className="text-brand-purple uppercase tracking-[0.3em] text-[10px] mb-4 block">Our Specialties</span>
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase text-white mb-6 leading-[1.1] font-black">
                                 {service.title.split(' ').map((word, i) => (
                                     i === 1 ? <span key={i} className="text-gradient italic pe-4">{word} </span> : word + ' '
@@ -87,7 +87,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                                         href={`/services/${s.slug}`}
                                         className="flex items-center justify-between p-5 rounded-2xl transition-all duration-300 bg-white/5 text-white border border-white/5 hover:bg-brand-purple hover:border-white/20 shadow-lg"
                                     >
-                                        <span className="font-bold uppercase text-[10px] tracking-widest">{s.title}</span>
+                                        <span className="uppercase text-[10px] tracking-widest">{s.title}</span>
                                         <ChevronRight size={16} />
                                     </Link>
                                 ))}
@@ -164,7 +164,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                                             <div className="w-10 h-10 rounded-full bg-brand-purple/10 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all shadow-lg shadow-brand-purple/5">
                                                 <CheckCircle2 size={18} />
                                             </div>
-                                            <span className="text-xs font-bold uppercase tracking-wider text-white/80 group-hover:text-white transition-colors">{benefit}</span>
+                                            <span className="text-xs uppercase tracking-wider text-white/80 group-hover:text-white transition-colors">{benefit}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -218,7 +218,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                                                 </svg>
                                                 <span className="absolute text-lg font-bold text-white">{stat.value}%</span>
                                             </div>
-                                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 group-hover:text-brand-purple transition-colors max-w-[100px]">
+                                            <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 group-hover:text-brand-purple transition-colors max-w-[100px]">
                                                 {stat.label}
                                             </span>
                                         </div>

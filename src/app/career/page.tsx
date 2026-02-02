@@ -75,7 +75,7 @@ export default function CareerPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Join Our Creative Powerhouse</span>
+                            <span className="text-brand-purple uppercase tracking-[0.3em] text-[10px] mb-4 block">Join Our Creative Powerhouse</span>
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase text-white mb-6 leading-[1.1] font-black">
                                 BUILD YOUR <br className="hidden md:block" />
                                 <span className="text-gradient italic pe-2">FUTURE</span> WITH US
@@ -101,7 +101,7 @@ export default function CareerPage() {
                             className="space-y-8"
                         >
                             <div className="space-y-2">
-                                <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px] block">Our Culture</span>
+                                <span className="text-brand-purple uppercase tracking-[0.3em] text-[11px] block">Our Culture</span>
                                 <h2 className="text-3xl md:text-5xl font-display uppercase text-white leading-tight font-black">
                                     EXPERIENCE A CULTURE OF <br /> <span className="text-gradient italic pe-4">INNOVATION</span>
                                 </h2>
@@ -124,7 +124,7 @@ export default function CareerPage() {
                                         <div className="w-6 h-6 rounded-full bg-brand-purple/20 flex items-center justify-center border border-brand-purple/30 group-hover:bg-brand-purple group-hover:scale-110 transition-all duration-300">
                                             <div className="w-2 h-2 rounded-full bg-brand-purple group-hover:bg-white" />
                                         </div>
-                                        <span className="text-white/80 text-sm font-medium transition-colors group-hover:text-white uppercase tracking-wide">{benefit}</span>
+                                        <span className="text-white/80 text-sm transition-colors group-hover:text-white uppercase tracking-wide">{benefit}</span>
                                     </motion.div>
                                 ))}
                             </div>
@@ -165,7 +165,7 @@ export default function CareerPage() {
                                     transition={{ delay: 0.5 }}
                                 >
                                     <div className="text-4xl font-bold text-white mb-2">98%</div>
-                                    <div className="text-[10px] font-bold uppercase tracking-widest text-brand-purple">Employee Satisfaction</div>
+                                    <div className="text-[10px] uppercase tracking-widest text-brand-purple">Employee Satisfaction</div>
                                 </motion.div>
                             </div>
                             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-purple/20 rounded-full blur-[80px] -z-10" />
@@ -178,7 +178,7 @@ export default function CareerPage() {
             <section className="py-24 bg-brand-black px-6" id="positions">
                 <div className="container mx-auto">
                     <div className="flex flex-col items-center mb-16 text-center">
-                        <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px] mb-4">Current Opportunities</span>
+                        <span className="text-brand-purple uppercase tracking-[0.3em] text-[11px] mb-4">Current Opportunities</span>
                         <h1 className="text-4xl md:text-6xl font-display uppercase tracking-tight text-white font-black">OPEN <span className="text-gradient italic pe-4">POSITIONS</span></h1>
                     </div>
 
@@ -196,7 +196,7 @@ export default function CareerPage() {
                                     <h3 className="text-2xl md:text-3xl font-display uppercase text-white group-hover:text-brand-purple transition-colors font-black tracking-tight">
                                         {job.title}
                                     </h3>
-                                    <div className="flex flex-wrap gap-6 text-muted text-[10px] font-bold uppercase tracking-widest">
+                                    <div className="flex flex-wrap gap-6 text-muted text-[10px] uppercase tracking-widest">
                                         <div className="flex items-center gap-2">
                                             <Briefcase size={14} className="text-brand-purple" />
                                             <span>{job.type}</span>
@@ -245,7 +245,7 @@ export default function CareerPage() {
                                 href="mailto:careers@safprinters.com"
                                 className="btn-primary inline-flex items-center justify-center px-12 py-5"
                             >
-                                <span className="text-[14px] tracking-[0.2em] font-black">Send Open Application</span>
+                                <span className="text-[14px] tracking-[0.2em]">Send Open Application</span>
                             </a>
                         </div>
                     </motion.div>

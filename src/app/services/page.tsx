@@ -36,7 +36,7 @@ export default function ServicesPage() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Our Expertise</span>
+                            <span className="text-brand-purple uppercase tracking-[0.3em] text-[10px] mb-4 block">Our Expertise</span>
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase text-white mb-6 leading-[1.1] font-black">
                                 SOLUTIONS THAT <br className="hidden md:block" />
                                 <span className="text-gradient italic pe-4">INSPIRE</span>
@@ -79,10 +79,10 @@ export default function ServicesPage() {
                                     <h2 className="text-2xl md:text-3xl font-display text-white mb-4 uppercase group-hover:text-brand-purple transition-colors font-black tracking-tighter leading-none">
                                         {service.title}
                                     </h2>
-                                    <p className="text-muted text-sm md:text-base leading-relaxed mb-10 flex-grow font-medium">
+                                    <p className="text-muted text-sm md:text-base leading-relaxed mb-10 flex-grow">
                                         {service.description}
                                     </p>
-                                    <div className="flex items-center text-brand-purple font-bold uppercase tracking-[0.2em] text-[11px] group-hover:gap-4 transition-all mt-auto pt-6 border-t border-white/5">
+                                    <div className="flex items-center text-brand-purple uppercase tracking-[0.2em] text-[11px] group-hover:gap-4 transition-all mt-auto pt-6 border-t border-white/5">
                                         EXPLORE SERVICE
                                         <ArrowRight className="ml-2 w-4 h-4" />
                                     </div>

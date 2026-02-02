@@ -192,7 +192,7 @@ export default function About() {
                                 </motion.div>
                             </motion.div>
                             <motion.h3
-                                className="text-xl font-bold mb-4 text-white uppercase"
+                                className="text-xl mb-4 text-white uppercase"
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
@@ -260,7 +260,7 @@ export default function About() {
                                 </motion.div>
                             </motion.div>
                             <motion.h3
-                                className="text-xl font-bold mb-4 text-white uppercase"
+                                className="text-xl mb-4 text-white uppercase"
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
@@ -321,7 +321,7 @@ export default function About() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
                                 >
-                                    <span className="font-bold text-white uppercase tracking-widest text-sm">
+                                    <span className="text-white uppercase tracking-widest text-sm">
                                         {stat.name}
                                     </span>
                                     <motion.span
@@ -384,7 +384,7 @@ export default function About() {
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px]"
+                                className="text-brand-purple uppercase tracking-[0.3em] text-[11px]"
                             >
                                 Purpose & Ambition
                             </motion.span>
@@ -402,7 +402,7 @@ export default function About() {
                                 whileHover={{ x: 10 }}
                                 transition={{ type: "spring", stiffness: 300 }}
                             >
-                                <h4 className="text-brand-purple font-bold uppercase tracking-widest text-xs mb-3">Our Mission</h4>
+                                <h4 className="text-brand-purple uppercase tracking-widest text-xs mb-3">Our Mission</h4>
                                 <p className="text-white/80 text-sm leading-relaxed">
                                     To provide premium display stands, branding and signage products to the market through innovative and sustainable methods.
                                 </p>
@@ -412,7 +412,7 @@ export default function About() {
                                 whileHover={{ x: 10 }}
                                 transition={{ type: "spring", stiffness: 300 }}
                             >
-                                <h4 className="text-brand-deep font-bold uppercase tracking-widest text-xs mb-3">Our Vision</h4>
+                                <h4 className="text-brand-deep uppercase tracking-widest text-xs mb-3">Our Vision</h4>
                                 <p className="text-white/80 text-sm leading-relaxed">
                                     To emerge as the finest service provider and manufacturer of high-quality advertising products in the region.
                                 </p>
@@ -448,7 +448,7 @@ export default function About() {
                         viewport={{ once: true }}
                         className="text-center mb-16 md:mb-20"
                     >
-                        <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px] mb-4 block">Foundational Principles</span>
+                        <span className="text-brand-purple uppercase tracking-[0.3em] text-[11px] mb-4 block">Foundational Principles</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight">
                             OUR <span className="text-gradient italic pe-4">CORE VALUES</span>
                         </h2>
@@ -473,7 +473,7 @@ export default function About() {
                                 <div className="w-16 h-16 rounded-2xl bg-brand-purple/10 flex items-center justify-center mb-6 border border-brand-purple/20 group-hover:bg-brand-purple group-hover:border-white/20 transition-all duration-500 shadow-lg shadow-brand-purple/5 group-hover:shadow-brand-purple/20">
                                     <value.icon className="w-8 h-8 text-brand-purple group-hover:text-white transition-colors duration-500" />
                                 </div>
-                                <h4 className="text-xl font-bold text-white mb-4 tracking-wider uppercase">{value.title}</h4>
+                                <h4 className="text-xl text-white mb-4 tracking-wider uppercase">{value.title}</h4>
                                 <p className="text-muted text-sm leading-relaxed">{value.desc}</p>
                             </motion.div>
                         ))}
@@ -494,7 +494,7 @@ export default function About() {
                         >
                             <div className="space-y-2">
                                 <motion.span
-                                    className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px]"
+                                    className="text-brand-purple uppercase tracking-[0.3em] text-[11px]"
                                     initial={{ opacity: 0, y: 10 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -533,7 +533,7 @@ export default function About() {
                                         <div className="w-6 h-6 rounded-full bg-brand-purple/20 flex items-center justify-center border border-brand-purple/30 group-hover:bg-brand-purple group-hover:scale-110 transition-all duration-300">
                                             <div className="w-2 h-2 rounded-full bg-brand-purple group-hover:bg-white" />
                                         </div>
-                                        <span className="text-white/80 text-sm font-medium transition-colors group-hover:text-white">{item}</span>
+                                        <span className="text-white/80 text-sm transition-colors group-hover:text-white">{item}</span>
                                     </motion.div>
                                 ))}
                             </div>
@@ -576,7 +576,7 @@ export default function About() {
                                     transition={{ delay: 0.5 }}
                                 >
                                     <div className="text-4xl font-bold text-white mb-1">98%</div>
-                                    <div className="text-[10px] font-bold uppercase tracking-widest text-brand-purple">Employee Satisfaction</div>
+                                    <div className="text-[10px] uppercase tracking-widest text-brand-purple">Employee Satisfaction</div>
                                 </motion.div>
                             </div>
 

@@ -38,7 +38,7 @@ export default function MapSection() {
                                     href="https://maps.google.com/?q=Prince+Sultan+Street,Jeddah,Saudi+Arabia"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-brand-purple hover:bg-brand-deep text-white px-6 py-3 rounded-xl text-sm font-bold flex items-center gap-2 transition-all shadow-lg shadow-brand-purple/20 active:scale-95"
+                                    className="bg-brand-purple hover:bg-brand-deep text-white px-6 py-3 rounded-xl text-sm flex items-center gap-2 transition-all shadow-lg shadow-brand-purple/20 active:scale-95"
                                 >
                                     Open Maps <ExternalLink size={16} />
                                 </a>
@@ -46,13 +46,13 @@ export default function MapSection() {
                                     href="https://www.google.com/maps/dir/?api=1&destination=Prince+Sultan+Street,Jeddah,Saudi+Arabia"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-6 py-3 rounded-xl text-sm font-bold flex items-center gap-2 transition-all active:scale-95"
+                                    className="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-6 py-3 rounded-xl text-sm flex items-center gap-2 transition-all active:scale-95"
                                 >
                                     Get Directions <Navigation size={16} />
                                 </a>
                                 <a
                                     href="tel:+966549900322"
-                                    className="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-6 py-3 rounded-xl text-sm font-bold flex items-center gap-2 transition-all active:scale-95"
+                                    className="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-6 py-3 rounded-xl text-sm flex items-center gap-2 transition-all active:scale-95"
                                 >
                                     Call for Help <Phone size={16} />
                                 </a>
@@ -60,12 +60,12 @@ export default function MapSection() {
                         </div>
 
                         <div className="flex flex-col gap-2">
-                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">Address</span>
+                            <span className="text-[10px] uppercase tracking-[0.2em] text-white/40">Address</span>
                             <a
                                 href="https://maps.google.com/?q=Prince+Sultan+Street,Al+Nahda+District,Jeddah,Saudi+Arabia"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-white/80 font-medium hover:text-brand-purple transition-colors group w-fit"
+                                className="flex items-center gap-3 text-white/80 hover:text-brand-purple transition-colors group w-fit"
                             >
                                 <MapPin size={18} className="text-brand-purple group-hover:scale-110 transition-transform" />
                                 <span className="text-sm">Prince Sultan Street, Al Nahda District, Jeddah, Saudi Arabia</span>

@@ -114,7 +114,7 @@ export default function ContactForm() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-brand-purple font-bold uppercase tracking-[0.4em] text-[10px] md:text-[11px] mb-4 block"
+                        className="text-brand-purple uppercase tracking-[0.4em] text-[10px] md:text-[11px] mb-4 block"
                     >
                         Direct Message
                     </motion.span>
@@ -153,7 +153,7 @@ export default function ContactForm() {
                                 whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.3 }}
-                                className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] md:text-[11px] mb-3 block"
+                                className="text-brand-purple uppercase tracking-[0.3em] text-[10px] md:text-[11px] mb-3 block"
                             >
                                 Contact Our Experts
                             </motion.span>
@@ -189,7 +189,7 @@ export default function ContactForm() {
                                         onFocus={() => setFocusedField("name")}
                                         onBlur={() => setFocusedField(null)}
                                         className={cn(
-                                            "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-6 py-4 focus:border-brand-purple/50 focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/30 text-sm font-medium",
+                                            "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-6 py-4 focus:border-brand-purple/50 focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/30 text-sm",
                                             errors.name && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
                                         )}
                                     />
@@ -198,7 +198,7 @@ export default function ContactForm() {
                                     <motion.p
                                         initial={{ opacity: 0, x: -10 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        className="text-red-500 text-[10px] ml-5 font-bold uppercase tracking-widest"
+                                        className="text-red-500 text-[10px] ml-5 uppercase tracking-widest"
                                     >
                                         {errors.name.message}
                                     </motion.p>
@@ -226,7 +226,7 @@ export default function ContactForm() {
                                             onFocus={() => setFocusedField("email")}
                                             onBlur={() => setFocusedField(null)}
                                             className={cn(
-                                                "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-6 py-4 focus:border-brand-purple/50 focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/30 text-sm font-medium",
+                                                "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-6 py-4 focus:border-brand-purple/50 focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/30 text-sm",
                                                 errors.email && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
                                             )}
                                         />
@@ -235,7 +235,7 @@ export default function ContactForm() {
                                         <motion.p
                                             initial={{ opacity: 0, x: -10 }}
                                             animate={{ opacity: 1, x: 0 }}
-                                            className="text-red-500 text-[10px] ml-5 font-bold uppercase tracking-widest"
+                                            className="text-red-500 text-[10px] ml-5 uppercase tracking-widest"
                                         >
                                             {errors.email.message}
                                         </motion.p>
@@ -260,7 +260,7 @@ export default function ContactForm() {
                                             onFocus={() => setFocusedField("phone")}
                                             onBlur={() => setFocusedField(null)}
                                             className={cn(
-                                                "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-6 py-4 focus:border-brand-purple/50 focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/30 text-sm font-medium",
+                                                "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-6 py-4 focus:border-brand-purple/50 focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/30 text-sm",
                                                 errors.phone && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
                                             )}
                                         />
@@ -269,7 +269,7 @@ export default function ContactForm() {
                                         <motion.p
                                             initial={{ opacity: 0, x: -10 }}
                                             animate={{ opacity: 1, x: 0 }}
-                                            className="text-red-500 text-[10px] ml-5 font-bold uppercase tracking-widest"
+                                            className="text-red-500 text-[10px] ml-5 uppercase tracking-widest"
                                         >
                                             {errors.phone.message}
                                         </motion.p>
@@ -294,7 +294,7 @@ export default function ContactForm() {
                                         type="button"
                                         onClick={() => setIsSelectOpen(!isSelectOpen)}
                                         className={cn(
-                                            "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-12 py-4 outline-none transition-all duration-300 text-sm font-medium flex items-center justify-between group text-left",
+                                            "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-12 py-4 outline-none transition-all duration-300 text-sm flex items-center justify-between group text-left",
                                             isSelectOpen ? "border-brand-purple/50 ring-1 ring-brand-purple/20" : "hover:border-white/20",
                                             errors.subject ? "border-red-500/50" : "",
                                             selectedSubject ? "text-white" : "text-white/30"
@@ -345,7 +345,7 @@ export default function ContactForm() {
                                     <motion.p
                                         initial={{ opacity: 0, x: -10 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        className="text-red-500 text-[10px] ml-5 font-bold uppercase tracking-widest"
+                                        className="text-red-500 text-[10px] ml-5 uppercase tracking-widest"
                                     >
                                         {errors.subject.message}
                                     </motion.p>
@@ -372,7 +372,7 @@ export default function ContactForm() {
                                         onFocus={() => setFocusedField("message")}
                                         onBlur={() => setFocusedField(null)}
                                         className={cn(
-                                            "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-6 py-4 focus:border-brand-purple/50 focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/30 text-sm font-medium resize-none",
+                                            "w-full bg-white/5 border border-white/10 rounded-2xl pl-14 pr-6 py-4 focus:border-brand-purple/50 focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all duration-300 text-white placeholder:text-white/30 text-sm resize-none",
                                             errors.message && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
                                         )}
                                     />
@@ -381,7 +381,7 @@ export default function ContactForm() {
                                     <motion.p
                                         initial={{ opacity: 0, x: -10 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        className="text-red-500 text-[10px] ml-5 font-bold uppercase tracking-widest"
+                                        className="text-red-500 text-[10px] ml-5 uppercase tracking-widest"
                                     >
                                         {errors.message.message}
                                     </motion.p>
@@ -429,7 +429,7 @@ export default function ContactForm() {
                                         initial={{ opacity: 0, y: 20, scale: 0.95 }}
                                         animate={{ opacity: 1, y: 0, scale: 1 }}
                                         exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                                        className="p-6 md:p-8 bg-brand-purple/20 border-2 border-brand-purple/30 text-white text-center rounded-2xl text-[11px] font-bold uppercase tracking-widest backdrop-blur-sm"
+                                        className="p-6 md:p-8 bg-brand-purple/20 border-2 border-brand-purple/30 text-white text-center rounded-2xl text-[11px] uppercase tracking-widest backdrop-blur-sm"
                                     >
                                         ✓ Success! We'll reach out to you shortly.
                                     </motion.div>
@@ -467,7 +467,7 @@ export default function ContactForm() {
                                             whileInView={{ opacity: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 0.5, delay: 0.4 }}
-                                            className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] md:text-[11px] mb-4 block"
+                                            className="text-brand-purple uppercase tracking-[0.3em] text-[10px] md:text-[11px] mb-4 block"
                                         >
                                             Why Choose Us
                                         </motion.span>
@@ -516,7 +516,7 @@ export default function ContactForm() {
                                                         <feature.icon className="w-6 h-6 text-brand-purple" />
                                                     </motion.div>
                                                     <div className="flex-1">
-                                                        <h4 className="text-white font-bold text-sm md:text-base mb-1 uppercase tracking-wide">
+                                                        <h4 className="text-white text-sm md:text-base mb-1 uppercase tracking-wide">
                                                             {feature.title}
                                                         </h4>
                                                         <p className="text-muted text-xs md:text-sm leading-relaxed">
@@ -560,7 +560,7 @@ export default function ContactForm() {
                                                 >
                                                     {stat.number}
                                                 </motion.div>
-                                                <div className="text-muted text-[10px] md:text-xs font-bold uppercase tracking-widest">
+                                                <div className="text-muted text-[10px] md:text-xs uppercase tracking-widest">
                                                     {stat.label}
                                                 </div>
                                             </motion.div>

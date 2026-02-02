@@ -65,7 +65,7 @@ export default function BlogPreview() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
-                                className="text-brand-purple font-bold uppercase tracking-[0.4em] text-[11px] mb-3 block"
+                                className="text-brand-purple uppercase tracking-[0.4em] text-[11px] mb-3 block"
                             >
                                 Editorial Insights
                             </motion.span>
@@ -87,7 +87,7 @@ export default function BlogPreview() {
                         >
                             <Link
                                 href="/blogs"
-                                className="group flex items-center gap-4 text-[12px] font-bold uppercase tracking-[0.25em] text-white/70 hover:text-brand-purple transition-all duration-500"
+                                className="group flex items-center gap-4 text-[12px] uppercase tracking-[0.25em] text-white/70 hover:text-brand-purple transition-all duration-500"
                             >
                                 <span className="relative overflow-hidden">
                                     <span className="inline-block transition-transform duration-500 group-hover:-translate-y-full">
@@ -146,7 +146,7 @@ export default function BlogPreview() {
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 0.4, delay: idx * 0.1 + 0.5 }}
                                             >
-                                                <div className="bg-brand-black/80 backdrop-blur-md text-white px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.25em] rounded-full shadow-lg border border-white/10 flex items-center gap-2 group-hover:bg-brand-purple group-hover:border-brand-purple transition-all duration-300">
+                                                <div className="bg-brand-black/80 backdrop-blur-md text-white px-5 py-2.5 text-[10px] uppercase tracking-[0.25em] rounded-full shadow-lg border border-white/10 flex items-center gap-2 group-hover:bg-brand-purple group-hover:border-brand-purple transition-all duration-300">
                                                     <Calendar size={12} className="text-brand-purple group-hover:text-white" />
                                                     <span>{post.date.split(' ').slice(0, 2).join(' ')}</span>
                                                 </div>
@@ -160,7 +160,7 @@ export default function BlogPreview() {
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 0.4, delay: idx * 0.1 + 0.6 }}
                                             >
-                                                <div className="bg-brand-purple text-white px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.25em] rounded-full shadow-lg opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                                                <div className="bg-brand-purple text-white px-5 py-2.5 text-[10px] uppercase tracking-[0.25em] rounded-full shadow-lg opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
                                                     {post.category}
                                                 </div>
                                             </motion.div>
@@ -173,7 +173,7 @@ export default function BlogPreview() {
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 0.4, delay: idx * 0.1 + 0.7 }}
                                             >
-                                                <div className="bg-brand-black/70 backdrop-blur-md text-white px-4 py-2 text-[9px] font-semibold uppercase tracking-[0.2em] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center gap-2">
+                                                <div className="bg-brand-black/70 backdrop-blur-md text-white px-4 py-2 text-[9px] uppercase tracking-[0.2em] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center gap-2">
                                                     <Clock size={10} className="text-brand-purple" />
                                                     <span>{post.readTime}</span>
                                                 </div>
@@ -182,7 +182,7 @@ export default function BlogPreview() {
 
                                         {/* Content */}
                                         <div className="flex-1 flex flex-col">
-                                            <h3 className="text-base md:text-lg lg:text-xl font-display leading-[1.3] text-white group-hover:text-brand-purple transition-all duration-500 font-semibold mb-3 line-clamp-3 uppercase tracking-tight">
+                                            <h3 className="text-base md:text-lg lg:text-xl font-display leading-[1.3] text-white group-hover:text-brand-purple transition-all duration-500 mb-3 line-clamp-3 uppercase tracking-tight">
                                                 {post.title}
                                             </h3>
 
@@ -192,7 +192,7 @@ export default function BlogPreview() {
                                             </p>
 
                                             {/* Read More Link */}
-                                            <div className="mt-auto flex items-center gap-3 text-brand-purple font-bold text-xs uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-15px] group-hover:translate-x-0">
+                                            <div className="mt-auto flex items-center gap-3 text-brand-purple text-xs uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-15px] group-hover:translate-x-0">
                                                 <span>Read Article</span>
                                                 <motion.div
                                                     animate={{ x: [0, 5, 0] }}

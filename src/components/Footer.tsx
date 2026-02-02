@@ -16,12 +16,12 @@ export default function Footer() {
                             <Link href="/" className="block h-10 w-32 mb-6 relative group transition-transform hover:scale-105">
                                 <Image
                                     src="https://vsafsub.macadz.com/wp-content/uploads/2026/01/logo-bg.png"
-                                    alt="Vsaf Adz Logo"
+                                    alt="V SAF arabia advertising company Logo"
                                     fill
                                     className="object-contain"
                                 />
                             </Link>
-                            <p className="text-muted leading-relaxed mb-6 text-sm font-medium max-w-xs">
+                            <p className="text-muted leading-relaxed mb-6 text-sm max-w-xs">
                                 Engineering future-proof advertising solutions that elevate brands through creative excellence and strategic innovation.
                             </p>
                             <div className="flex gap-4">
@@ -36,7 +36,7 @@ export default function Footer() {
                         {/* Second Column: Discover */}
                         <div>
                             <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-white">Discover</h4>
-                            <ul className="space-y-5 text-sm font-medium text-muted">
+                            <ul className="space-y-5 text-sm text-muted">
                                 <li><Link href="/about" className="hover:text-brand-purple transition-colors hover:translate-x-1 inline-block duration-300">About Our Agency</Link></li>
                                 <li><Link href="/services" className="hover:text-brand-purple transition-colors hover:translate-x-1 inline-block duration-300">Expert Services</Link></li>
                                 <li><Link href="/portfolio" className="hover:text-brand-purple transition-colors hover:translate-x-1 inline-block duration-300">Strategic Work</Link></li>
@@ -49,7 +49,7 @@ export default function Footer() {
                         {/* Third Column: Capabilities */}
                         <div>
                             <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-white">Capabilities</h4>
-                            <ul className="space-y-5 text-sm font-medium text-muted text-left">
+                            <ul className="space-y-5 text-sm text-muted text-left">
                                 <li className="hover:text-white transition-colors cursor-pointer">Events & Booth Design</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Premium Retail Podiums</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Dynamic Vehicle Branding</li>
@@ -61,7 +61,7 @@ export default function Footer() {
                         {/* Fourth Column: Get In Touch */}
                         <div>
                             <h4 className="text-lg font-bold uppercase mb-10 tracking-[0.2em] text-white">Get In Touch</h4>
-                            <div className="space-y-8 text-sm font-medium text-muted">
+                            <div className="space-y-8 text-sm text-muted">
                                 <a
                                     href="https://maps.google.com/?q=8127+Abdullah+Ibn+Badr,+Al-Sharafeyah,+Jeddah+23218+Saudi+Arabia"
                                     target="_blank"
@@ -91,10 +91,10 @@ export default function Footer() {
                 </div>
 
                 <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-                    <p className="text-white/20 text-xs font-bold uppercase tracking-widest">
+                    <p className="text-white/20 text-xs uppercase tracking-widest">
                         © 2026 V SAF arabia advertising company. Engineered by Mac Adz
                     </p>
-                    <div className="flex gap-10 text-xs font-bold uppercase tracking-widest text-white/20">
+                    <div className="flex gap-10 text-xs uppercase tracking-widest text-white/20">
                         <a href="#" className="hover:text-brand-purple transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-brand-purple transition-colors">Terms of Use</a>
                     </div>

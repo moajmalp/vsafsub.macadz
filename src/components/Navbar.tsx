@@ -184,7 +184,7 @@ export default function Navbar() {
                             <Link
                                 key={item.label}
                                 href={item.href}
-                                className="text-white/80 hover:text-brand-purple text-xl font-bold uppercase tracking-wider border-b border-white/5 pb-2"
+                                className="text-white/80 hover:text-brand-purple text-xl uppercase tracking-wider border-b border-white/5 pb-2"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 {item.label}
