@@ -34,7 +34,7 @@ export default function About() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.1 }}
                         >
-                            What is VSAF ADZ?
+                            What is V SAF ADZ?
                         </motion.h2>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -77,7 +77,7 @@ export default function About() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                         >
-                            VSAF ADZ is a premium branding agency that transforms your vision into reality.
+                            V SAF arabia advertising company is a premium branding agency that transforms your vision into reality.
                             We specialize in creating impactful brand experiences that captivate audiences
                             and drive business growth through innovative design and strategic thinking.
                         </motion.p>
@@ -389,7 +389,7 @@ export default function About() {
                                 Purpose & Ambition
                             </motion.span>
                             <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight">
-                                WHAT <span className="text-gradient italic">DRIVES US</span>
+                                WHAT <span className="text-gradient italic pe-4">DRIVES US</span>
                             </h2>
                         </div>
                         <p className="text-muted text-base md:text-lg leading-relaxed max-w-xl">
@@ -450,7 +450,7 @@ export default function About() {
                     >
                         <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px] mb-4 block">Foundational Principles</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight">
-                            OUR <span className="text-gradient italic pe-2">CORE VALUES</span>
+                            OUR <span className="text-gradient italic pe-4">CORE VALUES</span>
                         </h2>
                     </motion.div>
 
@@ -503,12 +503,12 @@ export default function About() {
                                 </motion.span>
                                 <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight leading-tight">
                                     EXPERIENCE A CULTURE OF <br />
-                                    <span className="text-gradient italic">INNOVATION</span>
+                                    <span className="text-gradient italic pe-4">INNOVATION</span>
                                 </h2>
                             </div>
 
                             <p className="text-muted text-base md:text-lg leading-relaxed">
-                                At Vsaf Adz, we believe that great work comes from people who feel
+                                At V SAF arabia advertising company, we believe that great work comes from people who feel
                                 inspired and empowered. We foster an environment where ideas are
                                 celebrated and everyone has the opportunity to grow.
                             </p>

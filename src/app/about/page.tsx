@@ -41,7 +41,7 @@ export default function AboutPage() {
                         >
                             <span className="text-primary font-bold uppercase tracking-[0.3em] text-[9px] mb-2 block">The Team Behind the Magic</span>
                             <h1 className="text-2xl md:text-4xl lg:text-5xl font-display uppercase text-white mb-4 leading-[1.1] font-bold">
-                                We Are <span className="text-primary italic">Vsaf Adz</span>
+                                We Are <span className="text-primary italic">V SAF arabia <br /> advertising company</span>
                             </h1>
                             <p className="text-white/70 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
                                 A premier creative agency dedicated to transforming visions into reality through strategic branding, high-end fabrication, and innovative digital solutions.

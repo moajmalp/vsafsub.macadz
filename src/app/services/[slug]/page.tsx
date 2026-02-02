@@ -55,7 +55,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                             <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Our Specialties</span>
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display uppercase text-white mb-6 leading-[1.1] font-black">
                                 {service.title.split(' ').map((word, i) => (
-                                    i === 1 ? <span key={i} className="text-gradient italic">{word} </span> : word + ' '
+                                    i === 1 ? <span key={i} className="text-gradient italic pe-4">{word} </span> : word + ' '
                                 ))}
                             </h1>
                             <p className="text-muted text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
@@ -150,7 +150,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                         {/* Text Content */}
                         <div className="space-y-8">
                             <h2 className="text-4xl md:text-5xl font-display uppercase text-white font-black leading-tight tracking-tight">
-                                <span className="text-gradient italic">Overview</span>
+                                <span className="text-gradient italic pe-4">Overview</span>
                             </h2>
                             <p className="text-white/90 text-lg leading-relaxed max-w-4xl">
                                 {service.content}

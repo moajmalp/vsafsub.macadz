@@ -103,12 +103,12 @@ export default function CareerPage() {
                             <div className="space-y-2">
                                 <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px] block">Our Culture</span>
                                 <h2 className="text-3xl md:text-5xl font-display uppercase text-white leading-tight font-black">
-                                    EXPERIENCE A CULTURE OF <br /> <span className="text-gradient italic">INNOVATION</span>
+                                    EXPERIENCE A CULTURE OF <br /> <span className="text-gradient italic pe-4">INNOVATION</span>
                                 </h2>
                             </div>
 
                             <p className="text-muted text-base md:text-lg leading-relaxed mb-10">
-                                At Vsaf Adz, we believe that great work comes from people who feel inspired and empowered. We foster an environment where ideas are celebrated and everyone has the opportunity to grow.
+                                At V SAF arabia advertising company, we believe that great work comes from people who feel inspired and empowered. We foster an environment where ideas are celebrated and everyone has the opportunity to grow.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
@@ -179,7 +179,7 @@ export default function CareerPage() {
                 <div className="container mx-auto">
                     <div className="flex flex-col items-center mb-16 text-center">
                         <span className="text-brand-purple font-bold uppercase tracking-[0.3em] text-[11px] mb-4">Current Opportunities</span>
-                        <h1 className="text-4xl md:text-6xl font-display uppercase tracking-tight text-white font-black">OPEN <span className="text-gradient italic">POSITIONS</span></h1>
+                        <h1 className="text-4xl md:text-6xl font-display uppercase tracking-tight text-white font-black">OPEN <span className="text-gradient italic pe-4">POSITIONS</span></h1>
                     </div>
 
                     <div className="space-y-6">
@@ -236,7 +236,7 @@ export default function CareerPage() {
                         <div className="relative z-10 max-w-4xl mx-auto">
                             <h2 className="text-3xl md:text-6xl font-display uppercase text-white mb-8 leading-[1.1] font-black tracking-tight">
                                 DON'T SEE THE <br className="hidden md:block" />
-                                <span className="text-gradient italic">RIGHT ROLE?</span>
+                                <span className="text-gradient italic pe-4">RIGHT ROLE?</span>
                             </h2>
                             <p className="text-muted text-base md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 We're always interested in talent. Send us your CV and portfolio anyway, and we'll keep you in mind for future openings.

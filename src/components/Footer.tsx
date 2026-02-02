@@ -92,7 +92,7 @@ export default function Footer() {
 
                 <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
                     <p className="text-white/20 text-xs font-bold uppercase tracking-widest">
-                        © 2026 Vsaf Adz Agency. Engineered by Mac Adz
+                        © 2026 V SAF arabia advertising company. Engineered by Mac Adz
                     </p>
                     <div className="flex gap-10 text-xs font-bold uppercase tracking-widest text-white/20">
                         <a href="#" className="hover:text-brand-purple transition-colors">Privacy Policy</a>

@@ -111,7 +111,7 @@ export default function Navbar() {
                         <div className="h-8 w-28 relative">
                             <img
                                 src="https://vsafsub.macadz.com/wp-content/uploads/2026/01/logo-bg.png"
-                                alt="Vsaf Adz Logo"
+                                alt="V SAF arabia advertising company Logo"
                                 className="h-full w-full object-contain"
                             />
                         </div>
@@ -157,7 +157,7 @@ export default function Navbar() {
                         <div className="h-8 w-28 relative">
                             <img
                                 src="https://vsafsub.macadz.com/wp-content/uploads/2026/01/logo-bg.png"
-                                alt="Vsaf Adz Logo"
+                                alt="V SAF arabia advertising company Logo"
                                 className="h-full w-full object-contain"
                             />
                         </div>

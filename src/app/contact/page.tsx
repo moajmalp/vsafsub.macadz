@@ -151,7 +151,7 @@ export default function ContactPage() {
                             transition={{ duration: 0.7, delay: 0.4 }}
                             className="text-muted text-base md:text-lg leading-relaxed"
                         >
-                            Contact VSAF ADZ for project inquiries, service details, and creative solutions in branding, advertising, and fabrication services.
+                            Contact V SAF arabia advertising company for project inquiries, service details, and creative solutions in branding, advertising, and fabrication services.
                         </motion.p>
                     </motion.div>
                 </div>
@@ -216,7 +216,7 @@ export default function ContactPage() {
                             className="glass-card rounded-[3rem] p-8 md:p-12 border border-white/5 shadow-2xl"
                         >
                             <h2 className="text-2xl md:text-3xl font-display font-black text-white mb-2 uppercase tracking-tight">
-                                Send a <span className="text-gradient italic">Message</span>
+                                Send a <span className="text-gradient italic pe-4">Message</span>
                             </h2>
                             <p className="text-muted text-sm mb-8">
                                 We'll get back to you within 24 hours.

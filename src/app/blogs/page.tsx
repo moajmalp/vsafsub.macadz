@@ -134,7 +134,7 @@ export default function BlogsPage() {
                             <div className="relative z-10 max-w-4xl mx-auto">
                                 <h2 className="text-4xl md:text-6xl font-display uppercase text-white mb-8 leading-[1.1] font-black tracking-tight">
                                     STAY AHEAD OF <br className="hidden md:block" />
-                                    <span className="text-gradient italic">THE CURVE</span>
+                                    <span className="text-gradient italic pe-4">THE CURVE</span>
                                 </h2>
                                 <p className="text-muted text-base md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                     Get the latest creative news and case studies delivered straight to your inbox monthly.
