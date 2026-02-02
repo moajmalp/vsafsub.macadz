@@ -6,6 +6,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Briefcase, MapPin, Clock, ArrowRight, CheckCircle2, Star } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
+import JobApplicationModal from "@/components/JobApplicationModal";
 
 const JOBS = [
     {
@@ -48,6 +50,14 @@ const BENEFITS = [
 ];
 
 export default function CareerPage() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedJob, setSelectedJob] = useState("");
+
+    const handleApply = (jobTitle: string) => {
+        setSelectedJob(jobTitle);
+        setIsModalOpen(true);
+    };
+
     return (
         <main className="min-h-screen bg-brand-black">
             <Navbar />
@@ -191,6 +201,7 @@ export default function CareerPage() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                                 className="group glass-card p-8 md:p-10 rounded-[3rem] border border-white/5 hover:border-brand-purple/50 transition-all cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-8 shadow-xl"
+                                onClick={() => handleApply(job.title)}
                             >
                                 <div className="space-y-4">
                                     <h3 className="text-2xl md:text-3xl font-display uppercase text-white group-hover:text-brand-purple transition-colors font-black tracking-tight">
@@ -212,7 +223,13 @@ export default function CareerPage() {
                                     </div>
                                 </div>
 
-                                <button className="btn-primary min-w-[180px] flex items-center justify-center gap-3">
+                                <button
+                                    className="btn-primary min-w-[180px] flex items-center justify-center gap-3"
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleApply(job.title);
+                                    }}
+                                >
                                     Apply Now <ArrowRight size={16} />
                                 </button>
                             </motion.div>
@@ -241,18 +258,24 @@ export default function CareerPage() {
                             <p className="text-muted text-base md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 We're always interested in talent. Send us your CV and portfolio anyway, and we'll keep you in mind for future openings.
                             </p>
-                            <a
-                                href="mailto:careers@safprinters.com"
+                            <button
+                                onClick={() => handleApply("Open Application")}
                                 className="btn-primary inline-flex items-center justify-center px-12 py-5"
                             >
                                 <span className="text-[14px] tracking-[0.2em]">Send Open Application</span>
-                            </a>
+                            </button>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
             <Footer />
+
+            <JobApplicationModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                initialPosition={selectedJob}
+            />
         </main>
     );
 }
